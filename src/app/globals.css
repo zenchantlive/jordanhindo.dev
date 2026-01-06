@@ -1,0 +1,312 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+/* ============================================
+   DESIGN TOKENS - Professional Dark Theme
+   Based on jordanhindo.dev portfolio template
+   ============================================ */
+
+:root {
+  /* Base colors - Dark theme (always) */
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  
+  /* Grays */
+  --gray-50: #fafafa;
+  --gray-100: #f5f5f5;
+  --gray-200: #e5e5e5;
+  --gray-300: #d4d4d4;
+  --gray-400: #a3a3a3;
+  --gray-500: #737373;
+  --gray-600: #525252;
+  --gray-700: #404040;
+  --gray-800: #262626;
+  --gray-900: #171717;
+  --gray-950: #0a0a0a;
+  
+  /* Accent colors */
+  --purple-400: #c084fc;
+  --purple-500: #a855f7;
+  --purple-600: #9333ea;
+  --blue-400: #60a5fa;
+  --blue-500: #3b82f6;
+  --blue-600: #2563eb;
+  --pink-400: #f472b6;
+  --pink-500: #ec4899;
+  --teal-400: #2dd4bf;
+  --teal-500: #14b8a6;
+  --green-400: #4ade80;
+  
+  /* Glass effect */
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+/* Theme inline for Tailwind v4 */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* ============================================
+   BASE STYLES
+   ============================================ */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Base section spacing and scroll anchor */
+section {
+  scroll-margin-top: 5rem;
+}
+
+/* Selection styling */
+::selection {
+  background: var(--purple-500);
+  color: white;
+}
+
+/* ============================================
+   GLASSMORPHISM COMPONENTS
+   ============================================ */
+
+/* Glass card - subtle background with blur */
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+}
+
+/* Glass navigation */
+.glass-nav {
+  background: rgba(10, 10, 10, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--glass-border);
+}
+
+/* ============================================
+   AURORA BACKGROUND EFFECTS
+   Subtle, professional - not overwhelming
+   ============================================ */
+
+/* Animated blob for aurora effect */
+@keyframes blob {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(20px, -30px) scale(1.1);
+  }
+  50% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+  75% {
+    transform: translate(30px, 10px) scale(1.05);
+  }
+}
+
+.animate-blob {
+  animation: blob 15s ease-in-out infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+/* ============================================
+   TEXT GRADIENT
+   ============================================ */
+
+.text-gradient {
+  background: linear-gradient(90deg, var(--purple-400), var(--blue-400));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ============================================
+   HOVER LIFT EFFECT
+   ============================================ */
+
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* ============================================
+   SCROLL REVEAL ANIMATION
+   ============================================ */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============================================
+   SCROLLBAR STYLING
+   ============================================ */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--gray-900);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gray-700);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gray-600);
+}
+
+/* ============================================
+   PRINT STYLES
+   Optimized for "Print to PDF"
+   ============================================ */
+
+@media print {
+  @page {
+    margin: 15mm;
+    size: A4 portrait;
+  }
+
+  /* Hide non-resume elements */
+  nav, 
+  footer, 
+  [role="navigation"],
+  button,
+  .no-print,
+  .download-button,
+  #aurora-background,
+  .aurora-background {
+    display: none !important;
+  }
+
+  /* Reset global layout for print */
+  body, html {
+    background: white !important;
+    color: black !important;
+    font-size: 11pt;
+    line-height: 1.4;
+  }
+
+  main {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* Reset glass cards for print */
+  .glass-card {
+    background: transparent !important;
+    backdrop-filter: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin-bottom: 2rem !important;
+    box-shadow: none !important;
+  }
+
+  /* Text color adjustments */
+  h1, h2, h3, h4 {
+    color: black !important;
+    page-break-after: avoid;
+  }
+
+  p, span, li {
+    color: #333 !important;
+  }
+
+  .text-gradient {
+    background: none !important;
+    -webkit-text-fill-color: black !important;
+    color: black !important;
+    font-weight: bold;
+  }
+
+  .text-purple-400, 
+  .text-blue-400,
+  .text-purple-300 {
+    color: #444 !important;
+    font-weight: 500;
+  }
+
+  /* Links */
+  a {
+    text-decoration: none !important;
+    color: black !important;
+  }
+
+  /* Timeline adjustments */
+  .border-l {
+    border-left-color: #ddd !important;
+  }
+
+  .bg-purple-500 {
+    background-color: black !important;
+    box-shadow: none !important;
+  }
+
+  /* Grid adjustments */
+  .grid {
+    display: block !important;
+  }
+
+  .md\:col-span-2,
+  .md\:grid-cols-3 {
+    width: 100% !important;
+  }
+
+  /* Skill tags */
+  .bg-white\/5 {
+    background: #f0f0f0 !important;
+    border-color: #ccc !important;
+    color: black !important;
+    print-color-adjust: exact;
+  }
+
+  /* Avoid breaking sections across pages */
+  section, .relative {
+    page-break-inside: auto;
+  }
+
+  .space-y-12 > div {
+    page-break-inside: avoid;
+    margin-bottom: 2rem;
+  }
+
+  /* Show URLs after links (optional, but professional) */
+  /* a[href^="http"]:after {
+    content: " (" attr(href) ")";
+    font-size: 8pt;
+  } */
+}
