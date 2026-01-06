@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="2800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .bg { fill: #0a0a0a; }
+      .card { fill: #1a1a1a; stroke: #333; stroke-width: 2; }
+      .card-chapter { fill: #1a1a1a; stroke: #a855f7; stroke-width: 3; }
+      .text-title { fill: #ffffff; font-family: Arial, sans-serif; font-size: 14px; font-weight: bold; }
+      .text-body { fill: #aaa; font-family: Arial, sans-serif; font-size: 11px; }
+      .text-meta { fill: #888; font-family: Arial, sans-serif; font-size: 9px; }
+      .text-heading { fill: #ffffff; font-family: Arial, sans-serif; font-size: 24px; font-weight: bold; }
+      .text-subhead { fill: #ffffff; font-family: Arial, sans-serif; font-size: 18px; font-weight: bold; }
+      .text-chapter { fill: #a855f7; font-family: Arial, sans-serif; font-size: 16px; font-weight: bold; }
+      .text-label { fill: #a855f7; font-family: Arial, sans-serif; font-size: 10px; font-weight: bold; }
+      .button { fill: #a855f7; }
+      .button-outline { fill: none; stroke: #a855f7; stroke-width: 2; }
+      .button-text { fill: #ffffff; font-family: Arial, sans-serif; font-size: 12px; font-weight: bold; }
+      .button-text-outline { fill: #a855f7; font-family: Arial, sans-serif; font-size: 12px; font-weight: bold; }
+      .chapter-icon { fill: #a855f7; }
+      .progress-bg { fill: #1a1a1a; stroke: #333; stroke-width: 2; }
+      .progress-bar { fill: #a855f7; }
+      .line { stroke: #333; stroke-width: 1; }
+      .line-gradient { stroke: url(#purpleGradient); stroke-width: 2; }
+    </style>
+    <linearGradient id="purpleGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#a855f7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect class="bg" width="1200" height="2800"/>
+
+  <!-- Page Title -->
+  <text class="text-heading" x="60" y="60">Building Asset Hatch</text>
+  <text class="text-body" x="60" y="85">A transparent build log organized into 4 chapters</text>
+
+  <!-- Progress Tracker -->
+  <rect class="progress-bg" x="60" y="110" width="1080" height="60" rx="8"/>
+  <text class="text-body" x="80" y="135">Your Progress</text>
+  <rect class="progress-bar" x="80" y="145" width="400" height="8" rx="4"/>
+  <rect class="progress-bg" x="80" y="145" width="1040" height="8" rx="4"/>
+  <text class="text-meta" x="80" y="165">3 of 18 posts read (17%)</text>
+
+  <!-- Chapter Navigation -->
+  <rect class="card" x="60" y="190" width="1080" height="80" rx="8"/>
+  <text class="text-body" x="80" y="215">Jump to:</text>
+  <rect class="button-outline" x="80" y="225" width="180" height="35" rx="6"/>
+  <text class="button-text-outline" x="120" y="248">📖 Ch 1: Genesis</text>
+
+  <rect class="button-outline" x="280" y="225" width="220" height="35" rx="6"/>
+  <text class="button-text-outline" x="320" y="248">🔨 Ch 2: Foundation</text>
+
+  <rect class="button-outline" x="520" y="225" width="240" height="35" rx="6"/>
+  <text class="button-text-outline" x="560" y="248">⚙️ Ch 3: Core Features</text>
+
+  <rect class="button-outline" x="780" y="225" width="200" height="35" rx="6"/>
+  <text class="button-text-outline" x="820" y="248">🚀 Ch 4: Polish</text>
+
+  <!-- Chapter 1: Genesis & Planning -->
+  <rect class="card-chapter" x="60" y="310" width="1080" height="500" rx="12"/>
+
+  <!-- Chapter Header -->
+  <circle class="chapter-icon" cx="90" cy="345" r="20"/>
+  <text class="text-chapter" x="80" y="352" text-anchor="middle">📖</text>
+  <text class="text-chapter" x="120" y="350">Chapter 1: Genesis & Planning</text>
+  <text class="text-body" x="120" y="370">Parts 1-4 • The origin story and initial decisions</text>
+  <line class="line-gradient" x1="80" y1="390" x2="1120" y2="390"/>
+
+  <!-- Posts in this chapter - 2x2 grid -->
+  <rect class="card" x="80" y="410" width="500" height="180" rx="8"/>
+  <text class="text-label" x="100" y="435">PART 1 • CHAPTER START</text>
+  <text class="text-title" x="100" y="460">Genesis - Why Build This?</text>
+  <text class="text-body" x="100" y="485">The problem: dozens of abandoned game projects, all stuck</text>
+  <text class="text-body" x="100" y="503">at asset creation. The solution: build an AI asset generator.</text>
+  <rect class="button" x="100" y="540" width="140" height="32" rx="6"/>
+  <text class="button-text" x="130" y="561">Read Part 1 →</text>
+  <text class="text-meta" x="100" y="575">📅 Jan 4 • ⏱ 7 min</text>
+
+  <rect class="card" x="600" y="410" width="520" height="180" rx="8"/>
+  <text class="text-label" x="620" y="435">PART 2</text>
+  <text class="text-title" x="620" y="460">First Contact - Building with AI</text>
+  <text class="text-body" x="620" y="485">Learning to work with Claude and other AI tools. The initial</text>
+  <text class="text-body" x="620" y="503">prototype, early wins, and surprising challenges.</text>
+  <rect class="button-outline" x="620" y="540" width="140" height="32" rx="6"/>
+  <text class="button-text-outline" x="650" y="561">Read Part 2 →</text>
+  <text class="text-meta" x="620" y="575">📅 Dec 25 • ⏱ 6 min</text>
+
+  <rect class="card" x="80" y="610" width="500" height="180" rx="8"/>
+  <text class="text-label" x="100" y="635">PART 3 • POPULAR</text>
+  <text class="text-title" x="100" y="660">The Crisis - When Frameworks Fail</text>
+  <text class="text-body" x="100" y="685">Everything broke. The difficult decision to start over and</text>
+  <text class="text-body" x="100" y="703">the lessons learned from choosing the wrong stack.</text>
+  <rect class="button-outline" x="100" y="740" width="140" height="32" rx="6"/>
+  <text class="button-text-outline" x="130" y="761">Read Part 3 →</text>
+  <text class="text-meta" x="100" y="775">📅 Dec 26 • ⏱ 9 min • 💬 45</text>
+
+  <rect class="card" x="600" y="610" width="520" height="180" rx="8"/>
+  <text class="text-label" x="620" y="635">PART 4</text>
+  <text class="text-title" x="620" y="660">Choosing the Tech Stack</text>
+  <text class="text-body" x="620" y="685">Evaluating Next.js, Supabase, Tailwind, and the AI APIs. Why</text>
+  <text class="text-body" x="620" y="703">these choices matter and how they shaped development.</text>
+  <rect class="button-outline" x="620" y="740" width="140" height="32" rx="6"/>
+  <text class="button-text-outline" x="650" y="761">Read Part 4 →</text>
+  <text class="text-meta" x="620" y="775">📅 Dec 27 • ⏱ 8 min</text>
+
+  <!-- Chapter 2: Foundation -->
+  <rect class="card-chapter" x="60" y="840" width="1080" height="400" rx="12"/>
+
+  <circle class="chapter-icon" cx="90" cy="875" r="20"/>
+  <text class="text-chapter" x="80" y="882" text-anchor="middle">🔨</text>
+  <text class="text-chapter" x="120" y="880">Chapter 2: Building the Foundation</text>
+  <text class="text-body" x="120" y="900">Parts 5-8 • Core architecture and essential systems</text>
+  <line class="line-gradient" x1="80" y1="920" x2="1120" y2="920"/>
+
+  <rect class="card" x="80" y="940" width="520" height="140" rx="8"/>
+  <text class="text-label" x="100" y="965">PART 5 • ESSENTIAL</text>
+  <text class="text-title" x="100" y="990">Building the Generation Engine</text>
+  <text class="text-body" x="100" y="1015">The technical core of Asset Hatch explained.</text>
+  <text class="text-meta" x="100" y="1065">📅 Dec 28 • ⏱ 15 min</text>
+
+  <rect class="card" x="620" y="940" width="500" height="140" rx="8"/>
+  <text class="text-label" x="640" y="965">PART 6</text>
+  <text class="text-title" x="640" y="990">User Interface Design</text>
+  <text class="text-body" x="640" y="1015">Creating an intuitive UI for asset generation.</text>
+  <text class="text-meta" x="640" y="1065">📅 Dec 29 • ⏱ 10 min</text>
+
+  <rect class="card" x="80" y="1100" width="520" height="120" rx="8"/>
+  <text class="text-label" x="100" y="1125">PART 7</text>
+  <text class="text-title" x="100" y="1150">Asset Storage & CDN</text>
+  <text class="text-meta" x="100" y="1200">📅 Dec 30 • ⏱ 7 min</text>
+
+  <rect class="card" x="620" y="1100" width="500" height="120" rx="8"/>
+  <text class="text-label" x="640" y="1125">PART 8</text>
+  <text class="text-title" x="640" y="1150">Version Control for Assets</text>
+  <text class="text-meta" x="640" y="1200">📅 Dec 31 • ⏱ 8 min</text>
+
+  <!-- Chapter 3: Core Features -->
+  <rect class="card-chapter" x="60" y="1270" width="1080" height="480" rx="12"/>
+
+  <circle class="chapter-icon" cx="90" cy="1305" r="20"/>
+  <text class="text-chapter" x="80" y="1312" text-anchor="middle">⚙️</text>
+  <text class="text-chapter" x="120" y="1310">Chapter 3: Core Features & Polish</text>
+  <text class="text-body" x="120" y="1330">Parts 9-15 • Advanced features and production readiness</text>
+  <line class="line-gradient" x1="80" y1="1350" x2="1120" y2="1350"/>
+
+  <!-- 3x2 grid for parts 9-14 -->
+  <rect class="card" x="80" y="1370" width="340" height="130" rx="8"/>
+  <text class="text-label" x="100" y="1395">PART 9</text>
+  <text class="text-title" x="100" y="1420">Real-time Previews</text>
+  <text class="text-meta" x="100" y="1480">⏱ 9 min</text>
+
+  <rect class="card" x="440" y="1370" width="340" height="130" rx="8"/>
+  <text class="text-label" x="460" y="1395">PART 10</text>
+  <text class="text-title" x="460" y="1420">API Design</text>
+  <text class="text-meta" x="460" y="1480">⏱ 8 min</text>
+
+  <rect class="card" x="800" y="1370" width="320" height="130" rx="8"/>
+  <text class="text-label" x="820" y="1395">PART 11</text>
+  <text class="text-title" x="820" y="1420">Database Architecture</text>
+  <text class="text-meta" x="820" y="1480">⏱ 10 min</text>
+
+  <rect class="card" x="80" y="1520" width="340" height="210" rx="8"/>
+  <text class="text-label" x="100" y="1545">PART 12 • DEEP DIVE</text>
+  <text class="text-title" x="100" y="1570">Building the Asset Editor</text>
+  <text class="text-body" x="100" y="1595">In-browser editing and refinement</text>
+  <text class="text-body" x="100" y="1613">tools for AI-generated assets.</text>
+  <rect class="button-outline" x="100" y="1660" width="140" height="32" rx="6"/>
+  <text class="button-text-outline" x="130" y="1681">Read Part 12 →</text>
+  <text class="text-meta" x="100" y="1715">📅 Dec 30 • ⏱ 13 min</text>
+
+  <rect class="card" x="440" y="1520" width="340" height="210" rx="8"/>
+  <text class="text-label" x="460" y="1545">PART 13</text>
+  <text class="text-title" x="460" y="1570">AI Model Fine-tuning</text>
+  <text class="text-body" x="460" y="1595">Customizing models for better</text>
+  <text class="text-body" x="460" y="1613">consistency and quality.</text>
+  <rect class="button-outline" x="460" y="1660" width="140" height="32" rx="6"/>
+  <text class="button-text-outline" x="490" y="1681">Read Part 13 →</text>
+  <text class="text-meta" x="460" y="1715">📅 Dec 31 • ⏱ 11 min</text>
+
+  <rect class="card" x="800" y="1520" width="320" height="210" rx="8"/>
+  <text class="text-label" x="820" y="1545">PART 14</text>
+  <text class="text-title" x="820" y="1570">Authentication</text>
+  <text class="text-body" x="820" y="1595">Secure user auth with</text>
+  <text class="text-body" x="820" y="1613">JWT and OAuth.</text>
+  <rect class="button-outline" x="820" y="1660" width="140" height="32" rx="6"/>
+  <text class="button-text-outline" x="850" y="1681">Read Part 14 →</text>
+  <text class="text-meta" x="820" y="1715">📅 Jan 1 • ⏱ 9 min</text>
+
+  <!-- Chapter 4: Launch & Beyond -->
+  <rect class="card-chapter" x="60" y="1780" width="1080" height="370" rx="12"/>
+
+  <circle class="chapter-icon" cx="90" cy="1815" r="20"/>
+  <text class="text-chapter" x="80" y="1822" text-anchor="middle">🚀</text>
+  <text class="text-chapter" x="120" y="1820">Chapter 4: Polish & Launch</text>
+  <text class="text-body" x="120" y="1840">Parts 15-18 • Final features and going live</text>
+  <line class="line-gradient" x1="80" y1="1860" x2="1120" y2="1860"/>
+
+  <rect class="card" x="80" y="1880" width="520" height="130" rx="8"/>
+  <text class="text-label" x="100" y="1905">PART 15 • ESSENTIAL</text>
+  <text class="text-title" x="100" y="1930">Payment Integration</text>
+  <text class="text-body" x="100" y="1955">Stripe subscriptions and billing systems.</text>
+  <text class="text-meta" x="100" y="1990">📅 Jan 2 • ⏱ 12 min</text>
+
+  <rect class="card" x="620" y="1880" width="500" height="130" rx="8"/>
+  <text class="text-label" x="640" y="1905">PART 16</text>
+  <text class="text-title" x="640" y="1930">Production Deployment</text>
+  <text class="text-body" x="640" y="1955">CI/CD pipelines and zero-downtime deploys.</text>
+  <text class="text-meta" x="640" y="1990">📅 Jan 3 • ⏱ 10 min</text>
+
+  <rect class="card" x="80" y="2030" width="520" height="100" rx="8"/>
+  <text class="text-label" x="100" y="2055">PART 17</text>
+  <text class="text-title" x="100" y="2080">Performance Optimization</text>
+  <text class="text-meta" x="100" y="2115">📅 Jan 4 • ⏱ 8 min</text>
+
+  <rect class="card" x="620" y="2030" width="500" height="100" rx="8"/>
+  <text class="text-label" x="640" y="2055">PART 18 • LATEST</text>
+  <text class="text-title" x="640" y="2080">How AI Wrote This Blog</text>
+  <text class="text-meta" x="640" y="2115">📅 Jan 5 • ⏱ 7 min</text>
+
+  <!-- Design Notes Section -->
+  <rect class="card" x="60" y="2190" width="1080" height="580" rx="12"/>
+  <text class="text-heading" x="80" y="2230">Design Concept 3: Chapter-Based Organization</text>
+
+  <text class="text-title" x="80" y="2270">Key Features:</text>
+  <text class="text-body" x="100" y="2300">• Thematic Grouping: Posts organized into logical chapters/phases</text>
+  <text class="text-body" x="100" y="2325">• Progress Tracking: Visual indicator of read posts (requires backend)</text>
+  <text class="text-body" x="100" y="2350">• Chapter Navigation: Jump directly to relevant sections</text>
+  <text class="text-body" x="100" y="2375">• Story Arc: Emphasizes the narrative journey of the build</text>
+  <text class="text-body" x="100" y="2400">• Collapsible Sections: Can expand/collapse chapters (not shown in wireframe)</text>
+
+  <text class="text-title" x="80" y="2440">Advantages:</text>
+  <text class="text-body" x="100" y="2470">✓ Natural organization for series with distinct phases</text>
+  <text class="text-body" x="100" y="2495">✓ Helps readers find specific topics easily</text>
+  <text class="text-body" x="100" y="2520">✓ Reduces cognitive load - 4 chapters vs 18 individual posts</text>
+  <text class="text-body" x="100" y="2545">✓ Can track progress through the series</text>
+  <text class="text-body" x="100" y="2570">✓ Works well for sequential reading</text>
+
+  <text class="text-title" x="80" y="2610">Best For:</text>
+  <text class="text-body" x="100" y="2640">• Series meant to be read sequentially</text>
+  <text class="text-body" x="100" y="2665">• Build logs with clear development phases</text>
+  <text class="text-body" x="100" y="2690">• Educational content with progressive difficulty</text>
+
+  <text class="text-title" x="80" y="2730">Technical Notes:</text>
+  <text class="text-body" x="100" y="2760">• Add "chapter" field to blog frontmatter metadata</text>
+</svg>
