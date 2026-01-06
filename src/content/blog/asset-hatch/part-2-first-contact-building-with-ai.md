@@ -8,6 +8,7 @@ description: "Previously: Decided to build Asset Hatch to solve the visual consi
 Now: Tim..."
 coverImage: ""
 tags: ["56744721958ef13879b9488e","584879f0c0aaf085e2012086","67200dcf65618dd1726b670c","5682df44aeae5c9e229cf9f9","5f0ab8a170ccf850bf4caf2a"]
+techStack: ["AI"]
 ---
 
 **Previously:** Decided to build Asset Hatch to solve the visual consistency problem in AI-generated game assets. Chose Next.js 15, CopilotKit, and OpenRouter. Committed to shipping in 6-8 weeks.

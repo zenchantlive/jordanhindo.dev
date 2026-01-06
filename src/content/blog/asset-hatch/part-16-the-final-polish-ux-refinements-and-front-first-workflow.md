@@ -8,6 +8,8 @@ description: "The Date: January 4, 2026 The Goal: Moving from \"functional\" to 
 Every project hits a point where the c..."
 coverImage: ""
 tags: ["5b5b1cd9d8f5763f693b02b7","5a2cd73a5b9ed1636662b439","56744723958ef13879b95434","56744723958ef13879b9524e","56744721958ef13879b949b0","56744722958ef13879b94e77"]
+featured: true
+techStack: ["DevOps"]
 ---
 
 **The Date:** January 4, 2026 **The Goal:** Moving from "functional" to "frictionless." **The Result:** A production-ready generation pipeline that enforces consistency.

@@ -10,6 +10,7 @@ Now: Time to build the generation infrastructure and make this production-ready.
 The Tes..."
 coverImage: ""
 tags: ["56744723958ef13879b9549b","56cfe81bfa28f5fe7f74d215","685cc368b61b171ea24ece4b","639eeb95d1e499a9b88a2301","5c2e005500d8d38a43560574","57067a5e115103c3b097818b"]
+techStack: ["Tailwind"]
 ---
 
 ---

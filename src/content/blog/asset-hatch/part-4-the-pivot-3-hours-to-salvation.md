@@ -8,6 +8,7 @@ description: "Previously: CopilotKit v1.50.1 is broken. Tool execution doesn't w
 Now: 2:15 PM. Coffee refilled. Let's rip this out and reb..."
 coverImage: ""
 tags: ["66ae032aa3a2a113838705d8","67200dcf65618dd1726b670c","56744723958ef13879b9534f","679d6344a2de8e72a1d89e74","67bff6a364ca958ae5a14013","5fac0d7e8f0a0265534779f5"]
+techStack: ["Next.js"]
 ---
 
 **Previously:** CopilotKit v1.50.1 is broken. Tool execution doesn't work. Spent 4 hours debugging. Made the decision to migrate to Vercel AI SDK.

@@ -9,6 +9,8 @@ Previously: Built a beautiful chat interface with CopilotKit. Cosmic UI looking 
 Now: Nothing works and ..."
 coverImage: ""
 tags: ["67200dcf65618dd1726b670c","66ae032aa3a2a113838705d8","56744721958ef13879b94b4d","56744723958ef13879b95372","56744721958ef13879b94db1","6630c91191ab510b4c5a0e75"]
+featured: true
+techStack: ["Leadership"]
 ---
 
 # Part 3: The Crisis - When Frameworks Fail

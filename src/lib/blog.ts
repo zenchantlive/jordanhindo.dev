@@ -95,7 +95,9 @@ export async function getPostsForSeries(seriesId: string): Promise<BlogPost[]> {
                     coverImage: data.coverImage || '',
                     readingTime: readingTime,
                     tags: data.tags || [],
-                    part: data.part
+                    part: data.part,
+                    featured: data.featured || false,
+                    techStack: data.techStack || []
                 };
             })
         );
