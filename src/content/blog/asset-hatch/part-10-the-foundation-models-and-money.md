@@ -8,6 +8,7 @@ description: "If the UI is the skin of Asset Hatch, and the sync logic is the ne
 Welcome to Part 10. We're talking i..."
 coverImage: ""
 tags: ["695afa122ccfd97102b2ffbe","695afa122ccfd97102b2ffbf","639eeb95d1e499a9b88a2301","57d1619e15ae0c65b80acb9e","586ce92e86a586aec9332727"]
+techStack: ["OpenAI API"]
 ---
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1767569830577/0d88bf2b-7b3c-42c2-be0f-997082a00f3b.png align="center")

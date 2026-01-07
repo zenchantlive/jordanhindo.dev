@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="2600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .bg { fill: #0a0a0a; }
+      .card { fill: #1a1a1a; stroke: #333; stroke-width: 2; }
+      .card-featured { fill: #1a1a1a; stroke: #a855f7; stroke-width: 2; }
+      .card-accent { fill: #1a1a1a; stroke: #3b82f6; stroke-width: 2; }
+      .text-title { fill: #ffffff; font-family: Arial, sans-serif; font-size: 14px; font-weight: bold; }
+      .text-body { fill: #aaa; font-family: Arial, sans-serif; font-size: 11px; }
+      .text-meta { fill: #888; font-family: Arial, sans-serif; font-size: 9px; }
+      .text-heading { fill: #ffffff; font-family: Arial, sans-serif; font-size: 24px; font-weight: bold; }
+      .text-subhead { fill: #ffffff; font-family: Arial, sans-serif; font-size: 18px; font-weight: bold; }
+      .text-label { fill: #a855f7; font-family: Arial, sans-serif; font-size: 10px; font-weight: bold; }
+      .button { fill: #a855f7; }
+      .button-text { fill: #ffffff; font-family: Arial, sans-serif; font-size: 12px; font-weight: bold; }
+      .line { stroke: #333; stroke-width: 1; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect class="bg" width="1200" height="2600"/>
+
+  <!-- Page Title -->
+  <text class="text-heading" x="60" y="60">Building Asset Hatch</text>
+  <text class="text-body" x="60" y="85">18-part series documenting the build process</text>
+
+  <!-- Hero Feature Post (Large) -->
+  <rect class="card-featured" x="60" y="120" width="730" height="400" rx="12"/>
+  <text class="text-label" x="80" y="145">FEATURED • PART 1</text>
+  <text class="text-heading" x="80" y="180">Genesis - Why Build This?</text>
+  <text class="text-body" x="80" y="210">The Setup: December 24, 2025. I'm looking at a dozen half-finished game projects,</text>
+  <text class="text-body" x="80" y="230">each abandoned at the same stage: asset creation. Not because I couldn't code the</text>
+  <text class="text-body" x="80" y="250">mechanics, but because I couldn't create, afford, or justify spending weeks on the</text>
+  <text class="text-body" x="80" y="270">hundreds of assets these games needed.</text>
+  <text class="text-body" x="80" y="305">This is the story of how I used AI to solve this problem - and why I'm building it in</text>
+  <text class="text-body" x="80" y="325">public for other indie devs facing the same challenge.</text>
+
+  <rect class="button" x="80" y="370" width="180" height="40" rx="8"/>
+  <text class="button-text" x="120" y="395">Start Reading Series →</text>
+
+  <text class="text-meta" x="80" y="490">📅 Jan 4, 2025 • ⏱ 7 min read • 💬 24 comments</text>
+
+  <!-- Side Panel - Latest 3 Posts (Vertical) -->
+  <rect class="card" x="820" y="120" width="320" height="120" rx="8"/>
+  <text class="text-label" x="840" y="145">PART 18 • NEW</text>
+  <text class="text-title" x="840" y="170">How AI Wrote This Blog</text>
+  <text class="text-meta" x="840" y="215">📅 Jan 5 • ⏱ 7 min</text>
+
+  <rect class="card" x="820" y="260" width="320" height="120" rx="8"/>
+  <text class="text-label" x="840" y="285">PART 17</text>
+  <text class="text-title" x="840" y="310">Performance Optimization</text>
+  <text class="text-meta" x="840" y="355">📅 Jan 4 • ⏱ 8 min</text>
+
+  <rect class="card" x="820" y="400" width="320" height="120" rx="8"/>
+  <text class="text-label" x="840" y="425">PART 16</text>
+  <text class="text-title" x="840" y="450">Production Deployment</text>
+  <text class="text-meta" x="840" y="495">📅 Jan 3 • ⏱ 10 min</text>
+
+  <!-- Section: Core Development -->
+  <text class="text-subhead" x="60" y="580">Core Development (Parts 2-10)</text>
+  <line class="line" x1="60" y1="590" x2="1140" y2="590"/>
+
+  <!-- Masonry-style Mixed Layout Row 1 -->
+  <!-- Wide Card -->
+  <rect class="card" x="60" y="620" width="540" height="200" rx="8"/>
+  <text class="text-label" x="80" y="645">PART 3 • POPULAR</text>
+  <text class="text-title" x="80" y="670">The Crisis - When Frameworks Fail</text>
+  <text class="text-body" x="80" y="695">What happens when your carefully chosen framework hits a wall? This post</text>
+  <text class="text-body" x="80" y="713">explores the moment everything broke and the difficult decision to rebuild.</text>
+  <text class="text-meta" x="80" y="795">📅 Dec 26 • ⏱ 9 min • 💬 45 comments</text>
+
+  <!-- Tall Card -->
+  <rect class="card-accent" x="630" y="620" width="510" height="300" rx="8"/>
+  <text class="text-label" x="650" y="645">PART 5 • DEEP DIVE</text>
+  <text class="text-title" x="650" y="670">Building the Generation Engine</text>
+  <text class="text-body" x="650" y="695">The technical heart of Asset Hatch: how we built a prompt-based asset</text>
+  <text class="text-body" x="650" y="713">generation engine that creates consistent, high-quality game assets.</text>
+  <text class="text-body" x="650" y="745">Topics covered:</text>
+  <text class="text-body" x="670" y="770">• Prompt engineering strategies for consistency</text>
+  <text class="text-body" x="670" y="790">• Model selection and API integration</text>
+  <text class="text-body" x="670" y="810">• Quality assurance and validation pipelines</text>
+  <text class="text-body" x="670" y="830">• Handling edge cases and failures gracefully</text>
+  <text class="text-meta" x="650" y="895">📅 Dec 28 • ⏱ 15 min • 💬 32 comments</text>
+
+  <!-- Row 2 - Three equal cards -->
+  <rect class="card" x="60" y="950" width="340" height="180" rx="8"/>
+  <text class="text-label" x="80" y="975">PART 2</text>
+  <text class="text-title" x="80" y="1000">First Contact with AI</text>
+  <text class="text-body" x="80" y="1025">Building the initial prototype and</text>
+  <text class="text-body" x="80" y="1043">learning to work with AI tools.</text>
+  <text class="text-meta" x="80" y="1105">📅 Dec 25 • ⏱ 6 min</text>
+
+  <rect class="card" x="430" y="950" width="340" height="180" rx="8"/>
+  <text class="text-label" x="450" y="975">PART 4</text>
+  <text class="text-title" x="450" y="1000">Choosing the Tech Stack</text>
+  <text class="text-body" x="450" y="1025">Evaluating Next.js, Supabase, and</text>
+  <text class="text-body" x="450" y="1043">other tools for the rebuild.</text>
+  <text class="text-meta" x="450" y="1105">📅 Dec 27 • ⏱ 8 min</text>
+
+  <rect class="card" x="800" y="950" width="340" height="180" rx="8"/>
+  <text class="text-label" x="820" y="975">PART 6</text>
+  <text class="text-title" x="820" y="1000">User Interface Design</text>
+  <text class="text-body" x="820" y="1025">Creating an intuitive UI for asset</text>
+  <text class="text-body" x="820" y="1043">generation and management.</text>
+  <text class="text-meta" x="820" y="1105">📅 Dec 29 • ⏱ 10 min</text>
+
+  <!-- Section: Advanced Features -->
+  <text class="text-subhead" x="60" y="1190">Advanced Features (Parts 11-15)</text>
+  <line class="line" x1="60" y1="1200" x2="1140" y2="1200"/>
+
+  <!-- Mixed row -->
+  <rect class="card" x="60" y="1230" width="340" height="200" rx="8"/>
+  <text class="text-label" x="80" y="1255">PART 11</text>
+  <text class="text-title" x="80" y="1280">Database Architecture</text>
+  <text class="text-body" x="80" y="1305">Designing schemas for efficient</text>
+  <text class="text-body" x="80" y="1323">asset storage and retrieval.</text>
+  <text class="text-meta" x="80" y="1405">📅 Dec 29 • ⏱ 10 min</text>
+
+  <rect class="card-accent" x="430" y="1230" width="710" height="200" rx="8"/>
+  <text class="text-label" x="450" y="1255">PART 15 • ESSENTIAL</text>
+  <text class="text-title" x="450" y="1280">Payment Integration & Billing Systems</text>
+  <text class="text-body" x="450" y="1305">A comprehensive guide to implementing Stripe for SaaS subscriptions, including</text>
+  <text class="text-body" x="450" y="1323">webhook handling, billing cycles, proration, and managing payment edge cases.</text>
+  <text class="text-body" x="450" y="1355">Covers everything from free trials to usage-based billing and invoice generation.</text>
+  <text class="text-meta" x="450" y="1405">📅 Jan 2 • ⏱ 12 min • 💬 28 comments</text>
+
+  <!-- Row of 4 compact cards -->
+  <rect class="card" x="60" y="1460" width="255" height="160" rx="8"/>
+  <text class="text-label" x="80" y="1485">PART 7</text>
+  <text class="text-title" x="80" y="1510">Asset Storage</text>
+  <text class="text-meta" x="80" y="1595">⏱ 7 min</text>
+
+  <rect class="card" x="345" y="1460" width="255" height="160" rx="8"/>
+  <text class="text-label" x="365" y="1485">PART 8</text>
+  <text class="text-title" x="365" y="1510">Version Control</text>
+  <text class="text-meta" x="365" y="1595">⏱ 8 min</text>
+
+  <rect class="card" x="630" y="1460" width="255" height="160" rx="8"/>
+  <text class="text-label" x="650" y="1485">PART 9</text>
+  <text class="text-title" x="650" y="1510">Real-time Previews</text>
+  <text class="text-meta" x="650" y="1595">⏱ 9 min</text>
+
+  <rect class="card" x="915" y="1460" width="225" height="160" rx="8"/>
+  <text class="text-label" x="935" y="1485">PART 10</text>
+  <text class="text-title" x="935" y="1510">API Design</text>
+  <text class="text-meta" x="935" y="1595">⏱ 8 min</text>
+
+  <!-- Load More Button -->
+  <rect class="button" x="500" y="1670" width="200" height="45" rx="8"/>
+  <text class="button-text" x="555" y="1698" text-anchor="middle">Load More Posts</text>
+
+  <!-- Design Notes Section -->
+  <rect class="card" x="60" y="1770" width="1080" height="780" rx="12"/>
+  <text class="text-heading" x="80" y="1810">Design Concept 2: Magazine-Style Layout</text>
+
+  <text class="text-title" x="80" y="1850">Key Features:</text>
+  <text class="text-body" x="100" y="1880">• Mixed Card Sizes: Visual hierarchy through varying dimensions</text>
+  <text class="text-body" x="100" y="1905">• Editorial Grouping: Posts organized by theme/phase (Genesis, Development, Polish)</text>
+  <text class="text-body" x="100" y="1930">• Prominent Featured Post: Hero section with rich description</text>
+  <text class="text-body" x="100" y="1955">• Quick Access Sidebar: Recent posts in compact format</text>
+  <text class="text-body" x="100" y="1980">• Visual Labels: "POPULAR", "NEW", "DEEP DIVE", "ESSENTIAL" badges</text>
+
+  <text class="text-title" x="80" y="2020">Advantages:</text>
+  <text class="text-body" x="100" y="2050">✓ More visually interesting than uniform grid</text>
+  <text class="text-body" x="100" y="2075">✓ Emphasizes important/popular content naturally</text>
+  <text class="text-body" x="100" y="2100">✓ Groups related posts into logical phases</text>
+  <text class="text-body" x="100" y="2125">✓ Tells a story through layout progression</text>
+  <text class="text-body" x="100" y="2150">✓ Engagement metrics visible (comments, popularity)</text>
+
+  <text class="text-title" x="80" y="2190">Best For:</text>
+  <text class="text-body" x="100" y="2220">• Series with distinct phases or chapters</text>
+  <text class="text-body" x="100" y="2245">• Highlighting key "must-read" posts</text>
+  <text class="text-body" x="100" y="2270">• Creating editorial narrative through visual design</text>
+  <text class="text-body" x="100" y="2295">• Sites with engagement/social features</text>
+
+  <text class="text-title" x="80" y="2335">Technical Notes:</text>
+  <text class="text-body" x="100" y="2365">• Use CSS Grid with grid-template-areas for flexible layouts</text>
+  <text class="text-body" x="100" y="2390">• Define "featured", "popular", "essential" metadata in frontmatter</text>
+  <text class="text-body" x="100" y="2415">• Section headers help users navigate chronologically</text>
+  <text class="text-body" x="100" y="2440">• Load more / infinite scroll for remaining posts</text>
+  <text class="text-body" x="100" y="2465">• Requires more manual curation for featured posts</text>
+
+  <text class="text-title" x="80" y="2505">Mobile Considerations:</text>
+  <text class="text-body" x="100" y="2535">• All cards become full-width, maintain vertical order</text>
+</svg>

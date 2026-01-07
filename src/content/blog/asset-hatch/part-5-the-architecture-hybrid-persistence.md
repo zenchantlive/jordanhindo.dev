@@ -10,6 +10,8 @@ The Problem Emerges
 It's..."
 coverImage: ""
 tags: ["695aef8d2ccfd97102b2ffb4","56744723958ef13879b9529a","5a748cf3f7ef75131419eb9e","5c4c8cbe86ae9b1b6b0e9999","56d9e25a4aa5f35f09dd6c98","584879f0c0aaf085e2012086"]
+featured: true
+techStack: ["OpenAI API", "Architecture"]
 ---
 
 **Previously:** Migrated from CopilotKit to Vercel AI SDK. Tools work! Planning phase complete.
