@@ -101,7 +101,7 @@ The current blog series pages use a **vertical timeline layout** that becomes ex
 ### Chapter Structure for Asset Hatch:
 - **Chapter 1: Genesis & Planning** (Parts 1-4) - Why build this, choosing the stack
 - **Chapter 2: Building the Foundation** (Parts 5-8) - Core architecture and systems
-- **Chapter 3: Core Features & Polish** (Parts 9-15) - Advanced features and production readiness
+- **Chapter 3: Core Features & Polish** (Parts 9-14) - Advanced features and production readiness
 - **Chapter 4: Polish & Launch** (Parts 15-18) - Final touches, deployment, retrospective
 
 ### Hybrid Approach (Best of All Worlds):
