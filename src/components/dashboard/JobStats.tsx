@@ -1,13 +1,12 @@
 'use client';
 
-import { 
-  BarChart, 
-  Bar, 
-  XAxis, 
-  YAxis, 
-  CartesianGrid, 
-  Tooltip, 
-  Legend, 
+import {
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
   ResponsiveContainer,
   PieChart,
   Pie,
@@ -40,7 +39,7 @@ export function JobStats({ applications }: JobStatsProps) {
     // Parse Salary: "$175K - $240K" -> 207.5
     const cleanSalary = app.salary.replace(/[^0-9\-\.]/g, '');
     let avgSalary = 0;
-    
+
     if (cleanSalary.includes('-')) {
       const parts = cleanSalary.split('-').map(p => Number(p));
       if (parts.length === 2 && !isNaN(parts[0]) && !isNaN(parts[1])) {
@@ -104,9 +103,9 @@ export function JobStats({ applications }: JobStatsProps) {
                 <CartesianGrid strokeDasharray="3 3" stroke="#444" />
                 <XAxis type="number" stroke="#ccc" />
                 <YAxis dataKey="company" type="category" width={100} stroke="#ccc" fontSize={12} />
-                <Tooltip 
+                <Tooltip
                   contentStyle={{ backgroundColor: '#333', border: 'none' }}
-                  cursor={{fill: 'transparent'}}
+                  cursor={{ fill: 'transparent' }}
                 />
                 <Bar dataKey="salary" fill="#82ca9d" name="Avg Salary (k)" radius={[0, 4, 4, 0]} />
               </BarChart>

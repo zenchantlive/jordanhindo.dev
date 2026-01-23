@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { BlogPost } from "@/types/blog";
-import GithubFeed from "./GithubFeed";
 
 interface BlogSectionProps {
     posts: BlogPost[];
@@ -34,8 +33,8 @@ export function BlogSection({ posts }: BlogSectionProps) {
 
                 {/* Blog posts grid with GitHub feed sidebar */}
                 <div className="grid lg:grid-cols-3 gap-8">
-                    {/* Blog posts */}
-                    <div className="lg:col-span-2 grid sm:grid-cols-2 gap-8">
+                    {/* Blog posts - full width now */}
+                    <div className="lg:col-span-3 grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
                         {posts.map((post) => (
                             <Link
                                 key={post.slug}
@@ -66,13 +65,6 @@ export function BlogSection({ posts }: BlogSectionProps) {
                                 </div>
                             </Link>
                         ))}
-                    </div>
-
-                    {/* GitHub Feed sidebar */}
-                    <div className="lg:col-span-1">
-                        <div className="sticky top-24">
-                            <GithubFeed />
-                        </div>
                     </div>
                 </div>
             </div>

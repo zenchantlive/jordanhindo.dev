@@ -1,5 +1,6 @@
 import { Navigation } from "@/components/Navigation";
 import { HeroSection } from "@/components/HeroSection";
+import { GithubFeed } from "@/components/github";
 import { SkillsSection } from "@/components/SkillsSection";
 import { AboutSection } from "@/components/AboutSection";
 import { ProjectsSection } from "@/components/ProjectsSection";
@@ -28,6 +29,10 @@ export default async function HomePage() {
       {/* Main content */}
       <main className="relative z-10">
         <HeroSection />
+        {/* Static GitHub feed - not sticky, positioned between hero and skills */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <GithubFeed />
+        </div>
         <SkillsSection />
         <AboutSection />
         <ProjectsSection />

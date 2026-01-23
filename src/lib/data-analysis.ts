@@ -73,7 +73,7 @@ export function getProjectStats(): ProjectStats[] {
     
     let totalReadTime = 0;
     let wordCount = 0;
-    let dates: number[] = [];
+    const dates: number[] = [];
 
     files.forEach(file => {
       const filePath = path.join(projectDir, file);
