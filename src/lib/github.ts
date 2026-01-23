@@ -32,8 +32,13 @@ export async function getRecentCommits(username: string): Promise<Commit[]> {
       }
     );
 
-    if (!res.ok) return [];
-
+    if (!res.ok) {
+      console.error(
+        `GitHub API request failed with status ${res.status}:`,
+        await res.text()
+      );
+      return [];
+    }
     const events: GitHubEvent[] = await res.json();
 
     // Filter for PushEvents and map to a flat list of commits
