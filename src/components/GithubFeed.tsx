@@ -29,7 +29,7 @@ export default async function GithubFeed() {
               </p>
               <div className="flex items-center gap-3 mt-1">
                 <span className="text-xs text-blue-400 font-mono">
-                  {commit.repo.replace("zenchantlive/", "")}
+                  {commit.repo.split('/')[1] || commit.repo}
                 </span>
                 <span className="text-[10px] text-gray-500 uppercase tracking-wider">
                   {new Date(commit.date).toLocaleDateString(undefined, {
