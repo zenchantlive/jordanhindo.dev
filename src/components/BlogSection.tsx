@@ -51,7 +51,7 @@ export function BlogSection({ posts }: BlogSectionProps) {
                             </h3>
 
                             {/* Excerpt */}
-                            <p className="text-gray-400 text-sm mb-6 flex-grow line-clamp-3">
+                            <p className="text-gray-300 text-sm mb-6 flex-grow line-clamp-3">
                                 {post.description}
                             </p>
 

@@ -10,7 +10,7 @@ import thefeedImg from './images/thefeed.png';
 
 export const metadata = {
     title: 'Resume | Jordan Hindo',
-    description: 'Forward Deployed Engineer and AI Application Developer resume.',
+    description: 'AI Agent Developer and LLM Application Engineer. Creator of multi-agent pipelines, tool-calling systems, and the AI-Native Loop methodology.',
 };
 
 export default function ResumePage() {
@@ -31,7 +31,7 @@ export default function ResumePage() {
                                     Jordan <span className="text-gradient">Hindo</span>
                                 </h1>
                                 <p className="text-xl text-purple-400 font-medium mb-6">
-                                    Forward Deployed Engineer &amp; AI Application Developer
+                                    AI Agent Developer & LLM Application Engineer
                                 </p>
 
                                 <div className="flex flex-wrap gap-4 text-sm text-gray-400">
@@ -79,8 +79,8 @@ export default function ResumePage() {
                                         title="Creator & Lead Developer"
                                         company="Asset Hatch"
                                         period="Dec 2025 - Present"
-                                        description="Built production-ready AI game asset generator in 11 days using multi-agent pipeline. Orchestrated Claude, Gemini, and Flux.2 for planning, generation, and testing. Documented methodology across 18-part technical blog series."
-                                        stats={['Next.js 15', 'Vercel AI SDK', 'Prompt Engineering', '30K+ Lines']}
+                                        description="Designed multi-agent AI pipeline achieving 70% development time reduction vs manual coding. Built tool-calling system with Vercel AI SDK and Zod schemas for type-safe agent execution. Created AI-Native Loop methodology: Claude (vision) → Antigravity (build) → Perplexity (research) → bots (review). 30,000+ line TypeScript codebase documented across 18-part blog series."
+                                        stats={['Multi-Agent Pipelines', 'Tool Calling', 'Vercel AI SDK', 'TypeScript']}
                                         link="https://github.com/zenchantlive/Asset-Hatch"
                                         image={assetHatchImg}
                                         liveUrl="https://asset-hatch.vercel.app"
@@ -90,8 +90,8 @@ export default function ResumePage() {
                                         title="Creator"
                                         company="Catwalk"
                                         period="Dec 2025"
-                                        description="One-click MCP server deployment platform. Users paste GitHub repo URL, AI analyzes config, deploys to isolated Fly.io container with Fernet-encrypted credentials. Implements Streamable HTTP per MCP 2025-06-18 spec. Documented methodology across 7-part technical blog series."
-                                        stats={['Python', 'FastAPI', 'Fly.io', 'MCP Protocol']}
+                                        description="Built MCP server deployment platform using 100% AI orchestration—zero manual code. Implemented multi-agent code review pipeline with CodeRabbit, Qodo, and Gemini Code Assist. Created 'AI Orchestrator's Handbook' documenting reproducible methodology for agentic development."
+                                        stats={['MCP Protocol', 'AI Orchestration', 'FastAPI', 'Fly.io']}
                                         link="https://github.com/zenchantlive/catwalk"
                                         image={catwalkImg}
                                         liveUrl="https://catwalk-xi.vercel.app"
@@ -101,8 +101,8 @@ export default function ResumePage() {
                                         title="Creator"
                                         company="TheFeed"
                                         period="Nov - Dec 2025"
-                                        description="Food security platform connecting people with food banks via Mapbox-powered map. Built AI 'Sous-Chef' assistant with CopilotKit. Dual-path architecture: anonymous crisis access + authenticated community features. Documented methodology across 14-part technical blog series."
-                                        stats={['Mapbox GL', 'CopilotKit', 'Drizzle ORM', 'Social Impact']}
+                                        description="Integrated AI assistant ('Sous-Chef') using CopilotKit for recipe generation from available ingredients. Built dual-path architecture enabling anonymous crisis access alongside authenticated features. Full-stack with Mapbox GL maps and Drizzle ORM."
+                                        stats={['AI Assistant', 'CopilotKit', 'Mapbox GL', 'Full-Stack']}
                                         link="https://thefeed-phi.vercel.app"
                                         image={thefeedImg}
                                         liveUrl="https://thefeed-phi.vercel.app"
@@ -138,8 +138,8 @@ export default function ResumePage() {
                                 <h2 className="text-2xl font-bold text-white mb-8">Skills</h2>
                                 <div className="space-y-8">
                                     <SkillGroup
-                                        title="AI & Prompt Engineering"
-                                        skills={['Prompt Engineering', 'LLM Orchestration', 'Multi-Agent Pipelines', 'MCP Protocol', 'Context Engineering']}
+                                        title="AI Agent Development"
+                                        skills={['Multi-Agent Pipelines', 'Tool Calling / Function Calling', 'RAG (Airweave)', 'LLM Orchestration', 'Context Engineering', 'MCP Protocol']}
                                     />
                                     <SkillGroup
                                         title="Frontend"
@@ -159,7 +159,7 @@ export default function ResumePage() {
                             <div className="glass-card rounded-2xl p-8 border-white/5 bg-gradient-to-br from-purple-500/5 to-blue-500/5">
                                 <h3 className="text-lg font-bold text-white mb-4">Let&apos;s Connect</h3>
                                 <p className="text-gray-400 text-sm mb-6">
-                                    Open to Forward Deployed Engineer and AI Application roles in the Bay Area.
+                                    Open to AI Agent Developer, LLM Engineer, and Forward Deployed roles. Bay Area or remote.
                                 </p>
                                 <div className="flex gap-4">
                                     <Link href="https://www.linkedin.com/in/jordan-hindo-711007173/" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/10 transition-colors text-white">

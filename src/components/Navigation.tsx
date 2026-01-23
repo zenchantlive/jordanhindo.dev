@@ -83,7 +83,7 @@ export function Navigation() {
 
             {/* Mobile Menu - slides down when open */}
             {isMobileMenuOpen && (
-                <div className="md:hidden glass-card border-t-0 border-x-0 absolute w-full">
+                <div className="md:hidden glass-card border-t-0 border-x-0 absolute w-full animate-slide-down">
                     <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                         {navLinks.map((link) => (
                             <Link

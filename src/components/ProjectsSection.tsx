@@ -124,7 +124,16 @@ export function ProjectsSection() {
 
                             {/* Project content */}
                             <div className="p-6 flex-grow flex flex-col relative -mt-12 z-20">
-                                {/* Tech stack pills - moved up to overlap image */}
+                                <div className="mb-4 pt-2">
+                                    <h3 className="text-xl font-bold text-white group-hover:text-purple-300 transition-colors mb-1">
+                                        {project.title}
+                                    </h3>
+                                    <p className="text-purple-400 font-medium text-xs uppercase tracking-wide">
+                                        {project.subtitle}
+                                    </p>
+                                </div>
+
+                                {/* Tech stack pills */}
                                 <div className="flex flex-wrap gap-2 mb-4">
                                     {project.techStack.map((tech) => (
                                         <span
@@ -136,16 +145,7 @@ export function ProjectsSection() {
                                     ))}
                                 </div>
 
-                                <div className="mb-4">
-                                    <h3 className="text-xl font-bold text-white group-hover:text-purple-300 transition-colors mb-1">
-                                        {project.title}
-                                    </h3>
-                                    <p className="text-purple-400 font-medium text-xs uppercase tracking-wide">
-                                        {project.subtitle}
-                                    </p>
-                                </div>
-
-                                <p className="text-gray-300 text-sm mb-6 leading-relaxed line-clamp-4 flex-grow">
+                                <p className="text-gray-200 text-sm mb-6 leading-relaxed line-clamp-4 flex-grow">
                                     {project.description}
                                 </p>
 
@@ -153,7 +153,7 @@ export function ProjectsSection() {
                                     {project.features.map((feature) => (
                                         <div
                                             key={feature}
-                                            className="flex items-center gap-2 text-xs text-gray-400 group-hover:text-gray-300 transition-colors"
+                                            className="flex items-center gap-2 text-xs text-gray-300 group-hover:text-gray-200 transition-colors"
                                         >
                                             <CheckCircle2 className="h-3.5 w-3.5 text-green-400/70" />
                                             <span>{feature}</span>
@@ -168,7 +168,7 @@ export function ProjectsSection() {
                                                 href={project.githubUrl}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="text-gray-400 hover:text-white transition-colors"
+                                                className="text-gray-300 hover:text-white transition-colors"
                                             >
                                                 <Github className="h-5 w-5" />
                                             </Link>
@@ -178,7 +178,7 @@ export function ProjectsSection() {
                                                 href={project.liveUrl}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="text-gray-400 hover:text-white transition-colors text-xs flex items-center gap-1 font-medium"
+                                                className="text-gray-300 hover:text-white transition-colors text-xs flex items-center gap-1 font-medium"
                                             >
                                                 Visit Live ↗
                                             </Link>

