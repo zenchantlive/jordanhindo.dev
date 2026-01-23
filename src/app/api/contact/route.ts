@@ -1,9 +1,6 @@
 import { Resend } from 'resend';
 import { NextResponse } from 'next/server';
 
-// Initialize Resend with the API key from environment variables
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 /**
  * Contact form submission request body type
  */
@@ -30,6 +27,9 @@ export async function POST(request: Request) {
                 { status: 400 }
             );
         }
+
+        // Initialize Resend lazily to avoid build-time errors when API key is missing
+        const resend = new Resend(process.env.RESEND_API_KEY);
 
         // Send the email using Resend
         const { data, error } = await resend.emails.send({
