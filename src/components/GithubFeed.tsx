@@ -50,6 +50,7 @@ export default async function GithubFeed() {
       <a
         href="https://github.com/zenchantlive"
         target="_blank"
+        rel="noopener noreferrer"
         className="mt-6 flex items-center justify-center gap-2 text-xs text-gray-400 hover:text-white transition-colors pt-4 border-t border-white/5"
       >
         View full GitHub <ExternalLink size={12} />
