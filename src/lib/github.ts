@@ -24,7 +24,6 @@ export async function getRecentCommits(username: string): Promise<Commit[]> {
       `https://api.github.com/users/${username}/events/public`,
       {
         // Cache for 1 hour using Next.js 15+ revalidate option
-        // @ts-expect-error - next option is supported in Next.js 15+
         next: { revalidate: 3600 },
         headers: process.env.GITHUB_TOKEN
           ? { Authorization: `token ${process.env.GITHUB_TOKEN}` }

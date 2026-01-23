@@ -87,7 +87,7 @@ export default async function BlogHub() {
                                 </p>
 
                                 <div className="mb-6">
-                                    <h3 className="text-white font-semibold mb-3">What's Covered:</h3>
+                                    <h3 className="text-white font-semibold mb-3">What&apos;s Covered:</h3>
                                     <ul className="text-gray-400 space-y-2 text-sm">
                                         <li>• Full-stack development: Next.js, PostgreSQL, Prisma</li>
                                         <li>• AI integration: OpenAI API, prompt engineering, fine-tuning</li>

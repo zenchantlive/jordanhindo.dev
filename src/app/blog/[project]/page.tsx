@@ -1,7 +1,7 @@
 import { Navigation, Footer, AuroraBackground, TechTag } from '@/components';
 import { getPostsForSeries, getSeriesMetadata } from '@/lib/blog';
 import Link from 'next/link';
-import { ArrowLeft, Clock, Star } from 'lucide-react';
+import { ArrowLeft, Star } from 'lucide-react';
 import { notFound } from 'next/navigation';
 
 interface SeriesPageProps {
