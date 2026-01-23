@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="2400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .bg { fill: #0a0a0a; }
+      .card { fill: #1a1a1a; stroke: #333; stroke-width: 2; }
+      .card-featured { fill: #1a1a1a; stroke: #a855f7; stroke-width: 2; }
+      .text-title { fill: #ffffff; font-family: Arial, sans-serif; font-size: 14px; font-weight: bold; }
+      .text-body { fill: #aaa; font-family: Arial, sans-serif; font-size: 11px; }
+      .text-meta { fill: #888; font-family: Arial, sans-serif; font-size: 9px; }
+      .text-heading { fill: #ffffff; font-family: Arial, sans-serif; font-size: 24px; font-weight: bold; }
+      .text-label { fill: #a855f7; font-family: Arial, sans-serif; font-size: 10px; font-weight: bold; }
+      .button { fill: #a855f7; }
+      .button-text { fill: #ffffff; font-family: Arial, sans-serif; font-size: 12px; font-weight: bold; }
+      .line { stroke: #333; stroke-width: 1; }
+      .gradient-line { stroke: url(#purpleGradient); stroke-width: 3; }
+    </style>
+    <linearGradient id="purpleGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#a855f7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect class="bg" width="1200" height="2400"/>
+
+  <!-- Page Title -->
+  <text class="text-heading" x="60" y="60">Building Asset Hatch</text>
+  <text class="text-body" x="60" y="85">A transparent build log of a production-ready AI game asset generator</text>
+  <text class="text-meta" x="60" y="105">18 Parts • Last updated Jan 5, 2025</text>
+
+  <!-- Filter/Sort Controls -->
+  <rect class="card" x="60" y="130" width="1080" height="50" rx="8"/>
+  <text class="text-body" x="80" y="160">🔍 Search posts...</text>
+  <text class="text-body" x="900" y="160">Sort by: Latest ▼</text>
+  <text class="text-body" x="1020" y="160">View: Grid ▼</text>
+
+  <!-- Featured/Hero Post (Latest) -->
+  <rect class="card-featured" x="60" y="210" width="1080" height="280" rx="12"/>
+  <text class="text-label" x="80" y="235">LATEST POST • PART 18</text>
+  <text class="text-heading" x="80" y="270">Bonus: How AI Wrote This Blog</text>
+  <text class="text-body" x="80" y="300">A detailed look at how I used Claude to write and generate content for this</text>
+  <text class="text-body" x="80" y="320">entire blog series, including the meta experience of documenting the process itself.</text>
+  <text class="text-body" x="80" y="340">Explore the prompts, workflows, and iterative refinement that made this possible.</text>
+
+  <!-- Tags -->
+  <rect class="card" x="80" y="360" width="60" height="24" rx="12"/>
+  <text class="text-meta" x="90" y="376">AI Tools</text>
+  <rect class="card" x="150" y="360" width="80" height="24" rx="12"/>
+  <text class="text-meta" x="160" y="376">Documentation</text>
+  <rect class="card" x="240" y="360" width="70" height="24" rx="12"/>
+  <text class="text-meta" x="250" y="376">Meta Post</text>
+
+  <!-- Meta info -->
+  <text class="text-meta" x="80" y="420">📅 Jan 5, 2025</text>
+  <text class="text-meta" x="200" y="420">⏱ 7 min read</text>
+
+  <!-- CTA Button -->
+  <rect class="button" x="80" y="440" width="150" height="35" rx="8"/>
+  <text class="button-text" x="110" y="463">Read Article →</text>
+
+  <!-- Grid Section Label -->
+  <text class="text-title" x="60" y="540">All Posts (18)</text>
+  <line class="line" x1="60" y1="550" x2="1140" y2="550"/>
+
+  <!-- Grid of Cards (3 columns) - Row 1 -->
+  <rect class="card" x="60" y="580" width="340" height="240" rx="8"/>
+  <text class="text-label" x="80" y="605">PART 17</text>
+  <text class="text-title" x="80" y="630">Performance Optimization Deep Dive</text>
+  <text class="text-body" x="80" y="655">Improving load times and responsiveness through</text>
+  <text class="text-body" x="80" y="673">intelligent caching and code splitting strategies.</text>
+  <text class="text-meta" x="80" y="790">📅 Jan 4 • ⏱ 8 min</text>
+
+  <rect class="card" x="430" y="580" width="340" height="240" rx="8"/>
+  <text class="text-label" x="450" y="605">PART 16</text>
+  <text class="text-title" x="450" y="630">Deploying to Production</text>
+  <text class="text-body" x="450" y="655">Setting up CI/CD pipelines, monitoring, and ensuring</text>
+  <text class="text-body" x="450" y="673">zero-downtime deployments for a production app.</text>
+  <text class="text-meta" x="450" y="790">📅 Jan 3 • ⏱ 10 min</text>
+
+  <rect class="card" x="800" y="580" width="340" height="240" rx="8"/>
+  <text class="text-label" x="820" y="605">PART 15</text>
+  <text class="text-title" x="820" y="630">Payment Integration & Billing</text>
+  <text class="text-body" x="820" y="655">Implementing Stripe for subscriptions, handling</text>
+  <text class="text-body" x="820" y="673">webhooks, and managing billing edge cases.</text>
+  <text class="text-meta" x="820" y="790">📅 Jan 2 • ⏱ 12 min</text>
+
+  <!-- Grid Row 2 -->
+  <rect class="card" x="60" y="850" width="340" height="240" rx="8"/>
+  <text class="text-label" x="80" y="875">PART 14</text>
+  <text class="text-title" x="80" y="900">User Authentication & Security</text>
+  <text class="text-body" x="80" y="925">Building a secure auth system with JWT,</text>
+  <text class="text-body" x="80" y="943">session management, and OAuth providers.</text>
+  <text class="text-meta" x="80" y="1060">📅 Jan 1 • ⏱ 9 min</text>
+
+  <rect class="card" x="430" y="850" width="340" height="240" rx="8"/>
+  <text class="text-label" x="450" y="875">PART 13</text>
+  <text class="text-title" x="450" y="900">AI Model Fine-tuning</text>
+  <text class="text-body" x="450" y="925">Customizing the AI models for better asset</text>
+  <text class="text-body" x="450" y="943">generation quality and brand consistency.</text>
+  <text class="text-meta" x="450" y="1060">📅 Dec 31 • ⏱ 11 min</text>
+
+  <rect class="card" x="800" y="850" width="340" height="240" rx="8"/>
+  <text class="text-label" x="820" y="875">PART 12</text>
+  <text class="text-title" x="820" y="900">Building the Asset Editor</text>
+  <text class="text-body" x="820" y="925">Creating an in-browser editor for refining and</text>
+  <text class="text-body" x="820" y="943">customizing AI-generated game assets.</text>
+  <text class="text-meta" x="820" y="1060">📅 Dec 30 • ⏱ 13 min</text>
+
+  <!-- Grid Row 3 -->
+  <rect class="card" x="60" y="1120" width="340" height="240" rx="8"/>
+  <text class="text-label" x="80" y="1145">PART 11</text>
+  <text class="text-title" x="80" y="1170">Database Architecture</text>
+  <text class="text-body" x="80" y="1195">Designing schemas for assets, users, and</text>
+  <text class="text-body" x="80" y="1213">projects with PostgreSQL and Prisma.</text>
+  <text class="text-meta" x="80" y="1330">📅 Dec 29 • ⏱ 10 min</text>
+
+  <rect class="card" x="430" y="1120" width="340" height="240" rx="8"/>
+  <text class="text-label" x="450" y="1145">PART 10</text>
+  <text class="text-title" x="450" y="1170">API Design & Rate Limiting</text>
+  <text class="text-body" x="450" y="1195">Creating RESTful endpoints with proper</text>
+  <text class="text-body" x="450" y="1213">rate limiting and error handling.</text>
+  <text class="text-meta" x="450" y="1330">📅 Dec 28 • ⏱ 8 min</text>
+
+  <rect class="card" x="800" y="1120" width="340" height="240" rx="8"/>
+  <text class="text-label" x="820" y="1145">PART 9</text>
+  <text class="text-title" x="820" y="1170">Real-time Preview System</text>
+  <text class="text-body" x="820" y="1195">Implementing WebSocket connections for</text>
+  <text class="text-body" x="820" y="1213">live asset generation previews.</text>
+  <text class="text-meta" x="820" y="1330">📅 Dec 27 • ⏱ 9 min</text>
+
+  <!-- Continue indicator -->
+  <text class="text-body" x="500" y="1400" text-anchor="middle">... 9 more posts below ...</text>
+
+  <!-- Pagination -->
+  <rect class="card" x="500" y="1450" width="200" height="40" rx="8"/>
+  <text class="text-body" x="565" y="1475" text-anchor="middle">← 1 2 3 →</text>
+
+  <!-- Design Notes Section -->
+  <rect class="card" x="60" y="1540" width="1080" height="800" rx="12"/>
+  <text class="text-heading" x="80" y="1580">Design Concept 1: Grid with Hero Post</text>
+
+  <text class="text-title" x="80" y="1620">Key Features:</text>
+  <text class="text-body" x="100" y="1650">• Hero Section: Latest/featured post gets prominent placement</text>
+  <text class="text-body" x="100" y="1675">• 3-Column Grid: Responsive layout (3 cols desktop, 2 tablet, 1 mobile)</text>
+  <text class="text-body" x="100" y="1700">• Search & Filter: Quick access to find specific posts</text>
+  <text class="text-body" x="100" y="1725">• Consistent Card Height: Clean, organized appearance</text>
+  <text class="text-body" x="100" y="1750">• Clear Hierarchy: Part numbers, titles, descriptions, metadata</text>
+
+  <text class="text-title" x="80" y="1790">Advantages:</text>
+  <text class="text-body" x="100" y="1820">✓ Shows more content above the fold (4-7 posts visible immediately)</text>
+  <text class="text-body" x="100" y="1845">✓ Easy to scan and browse multiple posts at once</text>
+  <text class="text-body" x="100" y="1870">✓ Featured post draws attention to latest content</text>
+  <text class="text-body" x="100" y="1895">✓ Familiar pattern users expect from blogs</text>
+  <text class="text-body" x="100" y="1920">✓ Works well with pagination or infinite scroll</text>
+
+  <text class="text-title" x="80" y="1960">Best For:</text>
+  <text class="text-body" x="100" y="1990">• Series where latest content is most important</text>
+  <text class="text-body" x="100" y="2015">• Users who want to browse and pick interesting topics</text>
+  <text class="text-body" x="100" y="2040">• Non-linear reading patterns</text>
+
+  <text class="text-title" x="80" y="2080">Technical Notes:</text>
+  <text class="text-body" x="100" y="2110">• Use CSS Grid for responsive layout</text>
+  <text class="text-body" x="100" y="2135">• Implement pagination (9-12 posts per page) or infinite scroll</text>
+  <text class="text-body" x="100" y="2160">• Add filtering by tags, date ranges, search terms</text>
+  <text class="text-body" x="100" y="2185">• Consider "jump to part" dropdown for direct navigation</text>
+  <text class="text-body" x="100" y="2210">• Maintain current glass-card aesthetic with gradient accents</text>
+
+  <text class="text-title" x="80" y="2250">Mobile Considerations:</text>
+  <text class="text-body" x="100" y="2280">• Hero post stays prominent but reduced height</text>
+  <text class="text-body" x="100" y="2305">• Grid collapses to single column with full-width cards</text>
+</svg>

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { BlogPost } from "@/types/blog";
+import GithubFeed from "./GithubFeed";
 
 interface BlogSectionProps {
     posts: BlogPost[];
@@ -31,38 +32,48 @@ export function BlogSection({ posts }: BlogSectionProps) {
                     </Link>
                 </div>
 
-                {/* Blog posts grid */}
-                <div className="grid md:grid-cols-3 gap-8">
-                    {posts.map((post) => (
-                        <Link
-                            key={post.slug}
-                            href={`/blog/asset-hatch/${post.slug}`}
-                            className="glass-card rounded-2xl p-8 hover:bg-white/10 hover:border-white/20
-                         transition-all duration-300 flex flex-col h-full group"
-                        >
-                            {/* Part label */}
-                            <div className="text-xs text-purple-400 mb-3 font-semibold tracking-wider">
-                                PART {post.part}
-                            </div>
+                {/* Blog posts grid with GitHub feed sidebar */}
+                <div className="grid lg:grid-cols-3 gap-8">
+                    {/* Blog posts */}
+                    <div className="lg:col-span-2 grid sm:grid-cols-2 gap-8">
+                        {posts.map((post) => (
+                            <Link
+                                key={post.slug}
+                                href={`/blog/asset-hatch/${post.slug}`}
+                                className="glass-card rounded-2xl p-8 hover:bg-white/10 hover:border-white/20
+                             transition-all duration-300 flex flex-col h-full group"
+                            >
+                                {/* Part label */}
+                                <div className="text-xs text-purple-400 mb-3 font-semibold tracking-wider">
+                                    PART {post.part}
+                                </div>
 
-                            {/* Title */}
-                            <h3 className="text-xl font-bold text-white mb-4 group-hover:text-purple-300 transition-colors">
-                                {post.title.replace(/^Part \d+: /, '')}
-                            </h3>
+                                {/* Title */}
+                                <h3 className="text-xl font-bold text-white mb-4 group-hover:text-purple-300 transition-colors">
+                                    {post.title.replace(/^Part \d+: /, '')}
+                                </h3>
 
-                            {/* Excerpt */}
-                            <p className="text-gray-300 text-sm mb-6 flex-grow line-clamp-3">
-                                {post.description}
-                            </p>
+                                {/* Excerpt */}
+                                <p className="text-gray-400 text-sm mb-6 flex-grow line-clamp-3">
+                                    {post.description}
+                                </p>
 
-                            {/* Metadata */}
-                            <div className="flex items-center gap-4 text-xs text-gray-500 mt-auto">
-                                <span>{post.readingTime} min read</span>
-                                <span className="w-1 h-1 rounded-full bg-gray-700" />
-                                <span>{new Date(post.date).toLocaleDateString()}</span>
-                            </div>
-                        </Link>
-                    ))}
+                                {/* Metadata */}
+                                <div className="flex items-center gap-4 text-xs text-gray-500 mt-auto">
+                                    <span>{post.readingTime} min read</span>
+                                    <span className="w-1 h-1 rounded-full bg-gray-700" />
+                                    <span>{new Date(post.date).toLocaleDateString()}</span>
+                                </div>
+                            </Link>
+                        ))}
+                    </div>
+
+                    {/* GitHub Feed sidebar */}
+                    <div className="lg:col-span-1">
+                        <div className="sticky top-24">
+                            <GithubFeed />
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

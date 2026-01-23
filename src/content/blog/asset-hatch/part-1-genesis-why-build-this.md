@@ -4,9 +4,11 @@ slug: "part-1-genesis-why-build-this"
 date: "2026-01-04T20:03:40.640Z"
 readTime: 7
 part: 1
-description: "The Setup: December 24, 2025, 10:47 AM. Chatting with Opus in the Claude Desktop app, the plan on the table felt bare, so I toss up the trusty ol’  Claude and threw the bare idea down. Enjoy the typos..."
+description: "The Setup: December 24, 2025, 10:47 AM. Chatting with Opus in the Claude Desktop app, the plan on the table felt bare, so I toss up the trusty ol'  Claude and threw the bare idea down. Enjoy the typos..."
 coverImage: ""
 tags: ["56744723958ef13879b954e0","56744721958ef13879b9488e","63ec0c658dd6c5e9122eadc4","6836c8089bdd890f147ff156","57067a5e115103c3b097818b"]
+featured: true
+techStack: ["Next.js", "Product Dev", "Strategy"]
 ---
 
 **The Setup:** December 24, 2025, 10:47 AM. Chatting with Opus in the Claude Desktop app, the plan on the table felt bare, so I toss up the trusty ol’ [Claude](http://www.claude.ai) and threw the bare idea down. Enjoy the typos!

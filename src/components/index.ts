@@ -10,4 +10,5 @@ export { ProjectsSection } from "./ProjectsSection";
 export { BlogSection } from "./BlogSection";
 export { ContactSection } from "./ContactSection";
 export { Footer } from "./Footer";
+export { TechTag } from "./TechTag";
 export { default as MarkdownRenderer } from './MarkdownRenderer';

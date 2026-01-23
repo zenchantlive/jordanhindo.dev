@@ -7,6 +7,7 @@ part: 11
 description: "December 30th. The penultimate day of the year. While most people were thinking about champagne and resolutions, I was thinking about how to stop my AI from being \"too helpful\" and how to make it se..."
 coverImage: ""
 tags: ["56744722958ef13879b94fb7","632c41ac318ff0fa183371ff","56744722958ef13879b951eb","639eeb95d1e499a9b88a2301","56744722958ef13879b94f32"]
+techStack: ["PostgreSQL"]
 ---
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1767570306093/3b3c3bb5-8ec0-4b47-b9ed-292c0cec888d.png align="center")

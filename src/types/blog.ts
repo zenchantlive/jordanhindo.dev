@@ -32,4 +32,6 @@ export interface BlogPost {
     readingTime: number;
     tags: string[];
     part?: number;
+    featured?: boolean;
+    techStack?: string[];
 }

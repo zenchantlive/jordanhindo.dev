@@ -10,6 +10,8 @@ The split-screen trap
 When we first built Asset Hatch, we w..."
 coverImage: ""
 tags: ["56744721958ef13879b94a96","580e3125ae2041e2cbf1e7b1","56744721958ef13879b949b0","56744723958ef13879b95434","56744723958ef13879b954e0","57d0839fb64935c2e8fdba94"]
+featured: true
+techStack: ["Tailwind", "UX"]
 ---
 
 **The Date:** January 2, 2026 **The Problem:** The mobile experience was "awful." **The Solution:** A complete architectural pivot for small screens.

@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="2000" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .bg { fill: #0a0a0a; }
+      .card { fill: #1a1a1a; stroke: #333; stroke-width: 2; }
+      .card-asset { fill: #1a1a1a; stroke: #a855f7; stroke-width: 3; }
+      .card-catwalk { fill: #1a1a1a; stroke: #3b82f6; stroke-width: 3; }
+      .card-thefeed { fill: #1a1a1a; stroke: #10b981; stroke-width: 3; }
+      .text-title { fill: #ffffff; font-family: Arial, sans-serif; font-size: 16px; font-weight: bold; }
+      .text-body { fill: #aaa; font-family: Arial, sans-serif; font-size: 12px; }
+      .text-meta { fill: #888; font-family: Arial, sans-serif; font-size: 10px; }
+      .text-heading { fill: #ffffff; font-family: Arial, sans-serif; font-size: 32px; font-weight: bold; }
+      .text-subhead { fill: #ffffff; font-family: Arial, sans-serif; font-size: 20px; font-weight: bold; }
+      .text-label { fill: #a855f7; font-family: Arial, sans-serif; font-size: 11px; font-weight: bold; }
+      .tech-tag { fill: #1a1a1a; stroke: #3b82f6; stroke-width: 1; }
+      .tech-text { fill: #3b82f6; font-family: Arial, sans-serif; font-size: 10px; }
+      .metric { fill: #1a1a1a; stroke: #333; stroke-width: 1; }
+      .metric-value { fill: #a855f7; font-family: Arial, sans-serif; font-size: 18px; font-weight: bold; }
+      .metric-label { fill: #888; font-family: Arial, sans-serif; font-size: 9px; }
+      .button { fill: #a855f7; }
+      .button-text { fill: #ffffff; font-family: Arial, sans-serif; font-size: 13px; font-weight: bold; }
+      .line { stroke: #333; stroke-width: 1; }
+      .gradient-purple { stroke: url(#purpleGradient); stroke-width: 2; }
+      .gradient-blue { stroke: url(#blueGradient); stroke-width: 2; }
+      .gradient-green { stroke: url(#greenGradient); stroke-width: 2; }
+    </style>
+    <linearGradient id="purpleGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#a855f7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ec4899;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="blueGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="greenGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect class="bg" width="1200" height="2000"/>
+
+  <!-- Hero Section -->
+  <text class="text-heading" x="60" y="80">Build Logs</text>
+  <text class="text-body" x="60" y="110">Three production apps built with AI - documented from idea to deployment</text>
+
+  <!-- Summary Stats Bar -->
+  <rect class="card" x="60" y="140" width="1080" height="80" rx="8"/>
+
+  <rect class="metric" x="90" y="160" width="150" height="50" rx="6"/>
+  <text class="metric-value" x="110" y="190">39</text>
+  <text class="metric-label" x="110" y="205">Total Posts</text>
+
+  <rect class="metric" x="270" y="160" width="200" height="50" rx="6"/>
+  <text class="metric-value" x="290" y="190">3</text>
+  <text class="metric-label" x="290" y="205">Production Apps</text>
+
+  <rect class="metric" x="500" y="160" width="180" height="50" rx="6"/>
+  <text class="metric-value" x="520" y="190">~500</text>
+  <text class="metric-label" x="520" y="205">Min Reading</text>
+
+  <rect class="metric" x="710" y="160" width="200" height="50" rx="6"/>
+  <text class="metric-value" x="730" y="190">100%</text>
+  <text class="metric-label" x="730" y="205">Built with AI</text>
+
+  <rect class="metric" x="940" y="160" width="170" height="50" rx="6"/>
+  <text class="metric-value" x="960" y="190">Jan 2025</text>
+  <text class="metric-label" x="960" y="205">Last Updated</text>
+
+  <!-- PROJECT 1: ASSET HATCH (Featured) -->
+  <rect class="card-asset" x="60" y="260" width="1080" height="360" rx="12"/>
+
+  <!-- Gradient accent line -->
+  <line class="gradient-purple" x1="80" y1="290" x2="400" y2="290"/>
+
+  <text class="text-label" x="80" y="315">18 PARTS • MOST RECENT</text>
+  <text class="text-subhead" x="80" y="345">Building Asset Hatch</text>
+  <text class="text-body" x="80" y="375">A production-ready AI game asset generator for indie developers. From problem</text>
+  <text class="text-body" x="80" y="395">identification to live deployment - a complete build journey including pivots,</text>
+  <text class="text-body" x="80" y="415">technical challenges, and production launch.</text>
+
+  <!-- Key Highlights -->
+  <text class="text-title" x="80" y="450">What's Covered:</text>
+  <text class="text-body" x="100" y="475">• Full-stack development: Next.js, PostgreSQL, Prisma</text>
+  <text class="text-body" x="100" y="495">• AI integration: OpenAI API, prompt engineering, fine-tuning</text>
+  <text class="text-body" x="100" y="515">• Production systems: Stripe payments, auth, real-time features</text>
+  <text class="text-body" x="100" y="535">• DevOps: CI/CD, monitoring, performance optimization</text>
+
+  <!-- Tech Stack -->
+  <rect class="tech-tag" x="80" y="560" width="70" height="24" rx="12"/>
+  <text class="tech-text" x="115" y="576" text-anchor="middle">Next.js</text>
+
+  <rect class="tech-tag" x="160" y="560" width="90" height="24" rx="12"/>
+  <text class="tech-text" x="205" y="576" text-anchor="middle">PostgreSQL</text>
+
+  <rect class="tech-tag" x="260" y="560" width="80" height="24" rx="12"/>
+  <text class="tech-text" x="300" y="576" text-anchor="middle">OpenAI</text>
+
+  <rect class="tech-tag" x="350" y="560" width="60" height="24" rx="12"/>
+  <text class="tech-text" x="380" y="576" text-anchor="middle">Stripe</text>
+
+  <rect class="tech-tag" x="420" y="560" width="70" height="24" rx="12"/>
+  <text class="tech-text" x="455" y="576" text-anchor="middle">Tailwind</text>
+
+  <!-- CTA -->
+  <rect class="button" x="80" y="595" width="180" height="40" rx="8"/>
+  <text class="button-text" x="125" y="620">Read Series →</text>
+
+  <!-- PROJECT 2: THEFEED -->
+  <rect class="card-thefeed" x="60" y="660" width="530" height="340" rx="12"/>
+
+  <line class="gradient-green" x1="80" y1="690" x2="320" y2="690"/>
+
+  <text class="text-label" x="80" y="715">14 PARTS</text>
+  <text class="text-subhead" x="80" y="745">TheFeed Development Journey</text>
+  <text class="text-body" x="80" y="775">Building an AI-powered food security platform</text>
+  <text class="text-body" x="80" y="795">from starter kit to production. Real-time social</text>
+  <text class="text-body" x="80" y="815">features, data aggregation, and scaling challenges.</text>
+
+  <text class="text-title" x="80" y="850">Highlights:</text>
+  <text class="text-body" x="100" y="875">• Real-time social feed architecture</text>
+  <text class="text-body" x="100" y="895">• AI content moderation & recommendations</text>
+  <text class="text-body" x="100" y="915">• Data aggregation & analytics</text>
+  <text class="text-body" x="100" y="935">• User engagement & retention</text>
+
+  <!-- Tech Stack -->
+  <rect class="tech-tag" x="80" y="960" width="70" height="22" rx="11"/>
+  <text class="tech-text" x="115" y="975" text-anchor="middle">Next.js</text>
+
+  <rect class="tech-tag" x="160" y="960" width="60" height="22" rx="11"/>
+  <text class="tech-text" x="190" y="975" text-anchor="middle">AI/ML</text>
+
+  <rect class="tech-tag" x="230" y="960" width="90" height="22" rx="11"/>
+  <text class="tech-text" x="275" y="975" text-anchor="middle">Real-time</text>
+
+  <!-- CTA -->
+  <rect class="button" x="80" y="995" width="180" height="38" rx="8"/>
+  <text class="button-text" x="125" y="1018">Read Series →</text>
+
+  <!-- PROJECT 3: CATWALK LIVE -->
+  <rect class="card-catwalk" x="610" y="660" width="530" height="340" rx="12"/>
+
+  <line class="gradient-blue" x1="630" y1="690" x2="870" y2="690"/>
+
+  <text class="text-label" x="630" y="715">7 PARTS</text>
+  <text class="text-subhead" x="630" y="745">Building Catwalk Live</text>
+  <text class="text-body" x="630" y="775">A "Vercel for MCP" deployment platform using</text>
+  <text class="text-body" x="630" y="795">AI-first development. Infrastructure automation,</text>
+  <text class="text-body" x="630" y="815">developer tooling, and platform engineering.</text>
+
+  <text class="text-title" x="630" y="850">Highlights:</text>
+  <text class="text-body" x="650" y="875">• Platform engineering & DevOps</text>
+  <text class="text-body" x="650" y="895">• Infrastructure as Code</text>
+  <text class="text-body" x="650" y="915">• Developer tooling & CLI</text>
+  <text class="text-body" x="650" y="935">• Multi-tenant architecture</text>
+
+  <!-- Tech Stack -->
+  <rect class="tech-tag" x="630" y="960" width="60" height="22" rx="11"/>
+  <text class="tech-text" x="660" y="975" text-anchor="middle">MCP</text>
+
+  <rect class="tech-tag" x="700" y="960" width="70" height="22" rx="11"/>
+  <text class="tech-text" x="735" y="975" text-anchor="middle">DevOps</text>
+
+  <rect class="tech-tag" x="780" y="960" width="80" height="22" rx="11"/>
+  <text class="tech-text" x="820" y="975" text-anchor="middle">Platform</text>
+
+  <!-- CTA -->
+  <rect class="button" x="630" y="995" width="180" height="38" rx="8"/>
+  <text class="button-text" x="675" y="1018">Read Series →</text>
+
+  <!-- Design Notes -->
+  <rect class="card" x="60" y="1040" width="1080" height="920" rx="12"/>
+  <text class="text-heading" x="80" y="1080" fill="#ffffff" font-size="24px">Blog Hub Redesign - For Startup Jobs</text>
+
+  <text class="text-title" x="80" y="1120">Design Goals:</text>
+  <text class="text-body" x="100" y="1150">1. Immediate Credibility: 3 production apps, 39 posts = serious builder</text>
+  <text class="text-body" x="100" y="1175">2. Breadth of Skills: Different problem domains, tech stacks, complexity levels</text>
+  <text class="text-body" x="100" y="1200">3. Professional Polish: Clean, organized, mature design</text>
+  <text class="text-body" x="100" y="1225">4. Easy Scanning: 10-second overview tells the full story</text>
+
+  <text class="text-title" x="80" y="1265">Key Features:</text>
+
+  <text class="text-subhead" x="100" y="1300" font-size="16px">Summary Stats Bar</text>
+  <text class="text-body" x="120" y="1330">• High-level metrics at a glance</text>
+  <text class="text-body" x="120" y="1355">• Shows volume (39 posts), diversity (3 apps), commitment (500+ min)</text>
+  <text class="text-body" x="120" y="1380">• "100% Built with AI" = modern development approach</text>
+
+  <text class="text-subhead" x="100" y="1420" font-size="16px">Featured Project (Asset Hatch)</text>
+  <text class="text-body" x="120" y="1450">• Largest card = most recent/comprehensive work</text>
+  <text class="text-body" x="120" y="1475">• Detailed "What's Covered" bullets show full-stack capabilities</text>
+  <text class="text-body" x="120" y="1500">• Purple gradient = signature color from your brand</text>
+
+  <text class="text-subhead" x="100" y="1540" font-size="16px">Supporting Projects (TheFeed, Catwalk)</text>
+  <text class="text-body" x="120" y="1570">• Side-by-side 2-column layout</text>
+  <text class="text-body" x="120" y="1595">• Different gradient colors for visual variety (green, blue)</text>
+  <text class="text-body" x="120" y="1620">• Show breadth: social platform vs infrastructure platform</text>
+
+  <text class="text-subhead" x="100" y="1660" font-size="16px">Tech Stack Visibility</text>
+  <text class="text-body" x="120" y="1690">• Every project shows key technologies</text>
+  <text class="text-body" x="120" y="1715">• Helps founders/recruiters pattern-match their stack</text>
+  <text class="text-body" x="120" y="1740">• Blue accent maintains consistency with individual series pages</text>
+
+  <text class="text-title" x="80" y="1780">What This Communicates to Startups:</text>
+  <text class="text-body" x="100" y="1810">✓ You ship production apps (not just tutorials)</text>
+  <text class="text-body" x="100" y="1835">✓ You have full-stack breadth (frontend, backend, infra, AI)</text>
+  <text class="text-body" x="100" y="1860">✓ You document thoroughly (attention to detail, communication skills)</text>
+  <text class="text-body" x="100" y="1885">✓ You leverage AI effectively (modern tooling, high productivity)</text>
+  <text class="text-body" x="100" y="1910">✓ You solve real problems (not vanity projects)</text>
+
+  <text class="text-title" x="80" y="1950">Alternative Layouts:</text>
+
+  <text class="text-body" x="100" y="1980">Option A (Current): 1 large + 2 medium cards</text>
+  <text class="text-body" x="120" y="2005">Best when: One project clearly most impressive/recent</text>
+
+  <text class="text-body" x="100" y="2040">Option B: 3 equal-sized cards in a row</text>
+  <text class="text-body" x="120" y="2065">Best when: All projects equally important</text>
+
+  <text class="text-body" x="100" y="2100">Option C: Timeline/chronological view</text>
+  <text class="text-body" x="120" y="2125">Best when: Showing progression/growth over time</text>
+
+  <text class="text-title" x="80" y="2165">Recommendation: Option A (shown above)</text>
+  <text class="text-body" x="100" y="2195">Asset Hatch is your most complete/recent work → deserves prominence</text>
+</svg>
