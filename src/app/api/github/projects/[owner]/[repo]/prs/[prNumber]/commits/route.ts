@@ -58,6 +58,7 @@ export async function GET(
       author: commit.commit.author?.name || "unknown",
       date: commit.commit.author?.date || new Date().toISOString(),
       url: commit.html_url,
+      repo: `${owner}/${repo}`,
     }));
 
     console.log(`Returning ${commits.length} commits for PR #${prNum} in ${owner}/${repo}`);
