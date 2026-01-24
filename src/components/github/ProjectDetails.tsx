@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { ExternalLink, ArrowLeft, GitCommit } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import {
   PRItem,
@@ -22,7 +22,7 @@ export function GithubProjectDetails({ project: initialProject, repoFullName, on
   const [prs, setPRs] = useState<PullRequest[]>([]);
   const [loading, setLoading] = useState(true);
   const [showAllPRs, setShowAllPRs] = useState(false);
-  
+
   const fullName = initialProject?.fullName || repoFullName;
 
   // Track which PR's commits are being viewed
@@ -50,19 +50,19 @@ export function GithubProjectDetails({ project: initialProject, repoFullName, on
       setLoading(true);
       try {
         if (!project) {
-            const projectsRes = await fetch('/api/github/projects');
-            if (projectsRes.ok) {
-                const data = await projectsRes.json();
-                const found = data.projects.find((p: Project) => p.fullName === fullName);
-                if (found) setProject(found);
-            }
+          const projectsRes = await fetch('/api/github/projects');
+          if (projectsRes.ok) {
+            const data = await projectsRes.json();
+            const found = data.projects.find((p: Project) => p.fullName === fullName);
+            if (found) setProject(found);
+          }
         }
 
         const res = await fetch(
           `/api/github/projects/${fullName}/prs`,
           { next: { revalidate: 60 } }
         );
-        
+
         if (res.ok) {
           const data = await res.json();
           setPRs(data.prs || []);
@@ -178,10 +178,9 @@ export function GithubProjectDetails({ project: initialProject, repoFullName, on
           <p className="text-gray-500 text-center py-8">No pull requests</p>
         ) : (
           <>
-            <div 
-              className={`space-y-2 sm:space-y-3 transition-all duration-300 overflow-y-auto pr-1 sm:pr-2 custom-scrollbar ${
-                showAllPRs ? "max-h-[500px] sm:max-h-[600px]" : "max-h-[280px] sm:max-h-[350px]"
-              }`}
+            <div
+              className={`space-y-2 sm:space-y-3 transition-all duration-300 overflow-y-auto pr-1 sm:pr-2 custom-scrollbar ${showAllPRs ? "max-h-[500px] sm:max-h-[600px]" : "max-h-[280px] sm:max-h-[350px]"
+                }`}
             >
               {displayedPRs.map((pr, idx) => (
                 <div key={pr.number}>
@@ -189,8 +188,8 @@ export function GithubProjectDetails({ project: initialProject, repoFullName, on
                     className="swiss-reveal"
                     style={{ animationDelay: `${idx * 0.05}s` } as React.CSSProperties}
                   >
-                    <PRItem 
-                      pr={pr} 
+                    <PRItem
+                      pr={pr}
                       onToggleCommits={() => toggleCommits(pr.number)}
                       commitsExpanded={commitsView.has(pr.number)}
                     />
@@ -235,14 +234,14 @@ export function GithubProjectDetails({ project: initialProject, repoFullName, on
             )}
 
             {isDedicatedPage && showAllPRs && (
-                <a 
-                    href={project.htmlUrl + "/pulls"}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full mt-2 py-2 text-[10px] text-gray-600 hover:text-terracotta-light transition-all flex items-center justify-center gap-2"
-                >
-                    Deep dive into GitHub History ↗
-                </a>
+              <a
+                href={project.htmlUrl + "/pulls"}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full mt-2 py-2 text-[10px] text-gray-600 hover:text-terracotta-light transition-all flex items-center justify-center gap-2"
+              >
+                Deep dive into GitHub History ↗
+              </a>
             )}
           </>
         )}
