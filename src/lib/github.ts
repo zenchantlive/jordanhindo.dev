@@ -36,6 +36,7 @@ export type Project = {
   status: ProjectStatus;
   gradient: string;
   htmlUrl: string;
+  blogUrl?: string;
 };
 
 export type PullRequestState = 'open' | 'closed' | 'merged';

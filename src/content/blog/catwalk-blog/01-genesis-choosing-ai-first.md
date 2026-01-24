@@ -7,6 +7,7 @@ updated: 2025-12-27
 tags: [AI, Claude Code, MCP, Solo Founder, AI Orchestration, Startup]
 reading_time: "8 min"
 status: published
+featured: true
 ---
 
 # Part 1: Genesis - Choosing AI-First Development

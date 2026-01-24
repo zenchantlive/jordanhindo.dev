@@ -1,7 +1,8 @@
 import { Navigation, Footer, AuroraBackground, TechTag } from '@/components';
 import { getPostsForSeries, getSeriesMetadata } from '@/lib/blog';
+import { GithubProjectDetails } from '@/components/github/ProjectDetails';
 import Link from 'next/link';
-import { ArrowLeft, Star } from 'lucide-react';
+import { ArrowLeft, Star, GitBranch } from 'lucide-react';
 import { notFound } from 'next/navigation';
 
 interface SeriesPageProps {
@@ -34,7 +35,7 @@ export default async function SeriesPage({ params }: SeriesPageProps) {
     const sidebarPosts = allPosts.slice(-3).reverse(); // Latest 3 posts
 
     // Group posts by section (customize per project)
-    const foundationPosts = allPosts.filter(p => p.part && p.part >= 2 && p.part <= 6);
+    const foundationPosts = allPosts.filter(p => p.part && p.part >= 1 && p.part <= 6);
     const productionPosts = allPosts.filter(p => p.part && p.part >= 9 && p.part <= 15);
     const remainingPosts = allPosts.filter(p => p.part && p.part >= 7 && p.part <= 8);
 
@@ -411,6 +412,28 @@ export default async function SeriesPage({ params }: SeriesPageProps) {
                                         </div>
                                     </Link>
                                 ))}
+                            </div>
+                        </section>
+                    )}
+
+                    {/* Section: GitHub Activity */}
+                    {series.githubRepo && (
+                        <section className="mt-20 pt-20 border-t border-white/5">
+                            <div className="flex items-center gap-3 mb-8">
+                                <div className="p-2 bg-terracotta/10 rounded-lg">
+                                    <GitBranch className="w-6 h-6 text-terracotta-light" />
+                                </div>
+                                <div>
+                                    <h2 className="text-2xl font-bold text-white">Development Activity</h2>
+                                    <p className="text-gray-500 text-sm">Real-time pulse of the build</p>
+                                </div>
+                            </div>
+                            
+                            <div className="bg-[#161b22]/40 backdrop-blur-xl border border-white/5 rounded-2xl p-8">
+                                <GithubProjectDetails 
+                                    repoFullName={series.githubRepo} 
+                                    isDedicatedPage={true} 
+                                />
                             </div>
                         </section>
                     )}

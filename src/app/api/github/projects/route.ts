@@ -75,6 +75,12 @@ export async function GET() {
         // Determine last activity from events or repo update
         const lastActivity = activityMap.get(repo.full_name) || repo.pushed_at;
         
+        // Map to blog URLs if they exist
+        const blogMap: Record<string, string> = {
+          'zenchantlive/Asset-Hatch': '/blog/asset-hatch',
+          'zenchantlive/catwalk': '/blog/catwalk-blog',
+        };
+        
         return {
           name: repo.name,
           fullName: repo.full_name,
@@ -86,6 +92,7 @@ export async function GET() {
           status: getProjectStatus(lastActivity, repo.name),
           gradient: '', // Placeholder, will assign unique below
           htmlUrl: repo.html_url,
+          blogUrl: blogMap[repo.full_name]
         };
       })
       .sort((a, b) => new Date(b.lastActivity).getTime() - new Date(a.lastActivity).getTime())

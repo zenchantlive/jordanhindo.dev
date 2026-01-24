@@ -21,14 +21,16 @@ export async function getSeriesMetadata(seriesId: string): Promise<BlogSeries | 
                 title: 'Building Asset Hatch',
                 description: 'A transparent build log of a production-ready AI game asset generator.',
                 lastUpdated: '2026-01-05',
-                slug: 'asset-hatch'
+                slug: 'asset-hatch',
+                githubRepo: 'zenchantlive/Asset-Hatch'
             },
             'catwalk-blog': {
                 id: 'catwalk-blog',
                 title: 'Building Catwalk Live',
                 description: 'The journey of creating a "Vercel for MCP" deployment platform using AI-first development.',
                 lastUpdated: '2025-12-27',
-                slug: 'catwalk-blog'
+                slug: 'catwalk-blog',
+                githubRepo: 'zenchantlive/catwalk'
             },
             'thefeed-blog': {
                 id: 'thefeed-blog',

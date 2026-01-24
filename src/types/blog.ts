@@ -19,6 +19,7 @@ export interface BlogSeries {
     itemCount: number;
     lastUpdated: string;
     slug: string;
+    githubRepo?: string;
 }
 
 export interface BlogPost {

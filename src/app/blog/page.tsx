@@ -90,8 +90,8 @@ export default async function BlogHub() {
                                     <h3 className="text-white font-semibold mb-3">What&apos;s Covered:</h3>
                                     <ul className="text-gray-400 space-y-2 text-sm">
                                         <li>• Full-stack development: Next.js, PostgreSQL, Prisma</li>
-                                        <li>• AI integration: OpenAI API, prompt engineering, fine-tuning</li>
-                                        <li>• Production systems: Stripe payments, auth, real-time features</li>
+                                        <li>• AI integration: OpenRouter API, prompt engineering, fine-tuning</li>
+                                        <li>• Production systems: NeonDB, auth, real-time features</li>
                                         <li>• DevOps: CI/CD, monitoring, performance optimization</li>
                                     </ul>
                                 </div>
@@ -99,8 +99,8 @@ export default async function BlogHub() {
                                 <div className="flex flex-wrap gap-2 mb-6">
                                     <TechTag tech="Next.js" size="md" />
                                     <TechTag tech="PostgreSQL" size="md" />
-                                    <TechTag tech="OpenAI" size="md" />
-                                    <TechTag tech="Stripe" size="md" />
+                                    <TechTag tech="OpenRouter" size="md" />
+                                    <TechTag tech="NeonDB" size="md" />
                                     <TechTag tech="Tailwind" size="md" />
                                 </div>
 
@@ -147,8 +147,9 @@ export default async function BlogHub() {
 
                                     <div className="flex flex-wrap gap-2 mb-4">
                                         <TechTag tech="Next.js" />
-                                        <TechTag tech="AI/ML" />
+                                        <TechTag tech="Community-Focus" />
                                         <TechTag tech="Real-time" />
+                                        <TechTag tech="Food Safety" />
                                     </div>
 
                                     <div className="inline-flex items-center gap-2 text-green-400 font-semibold group-hover:gap-3 transition-all text-sm">
@@ -194,6 +195,7 @@ export default async function BlogHub() {
                                         <TechTag tech="MCP" />
                                         <TechTag tech="DevOps" />
                                         <TechTag tech="Platform" />
+                                        <TechTag tech="Fly.io" />
                                     </div>
 
                                     <div className="inline-flex items-center gap-2 text-blue-400 font-semibold group-hover:gap-3 transition-all text-sm">

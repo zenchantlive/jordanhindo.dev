@@ -48,51 +48,51 @@ export function ProjectItem({ project, onClick }: ProjectItemProps) {
   return (
     <button
       onClick={onClick}
-      className="w-full group swiss-card text-left p-4"
+      className="w-full group swiss-card text-left p-3 sm:p-4 active:scale-[0.98] transition-transform"
     >
-      <div className="flex items-start gap-4">
+      <div className="flex items-center sm:items-start gap-3 sm:gap-4">
         {/* Icon */}
-        <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${gradient} flex items-center justify-center flex-shrink-0`}>
-          <FolderGit2 className="w-6 h-6 text-white" />
+        <div className={`w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br ${gradient} flex items-center justify-center flex-shrink-0`}>
+          <FolderGit2 className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
         </div>
 
         {/* Content */}
         <div className="flex-1 min-w-0">
-          <div className="flex items-center gap-3 mb-1">
-            <span className="font-semibold text-gray-100 group-hover:text-white transition-colors">
+          <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3 mb-1">
+            <span className="font-semibold text-gray-100 group-hover:text-white transition-colors truncate">
               {shortName}
             </span>
             <div className="flex items-center gap-2">
               <StatusBadge status={project.status} />
               {project.name.toLowerCase() === 'jordanhindo.dev' && (
-                <span className="swiss-badge-portfolio">This Website!</span>
+                <span className="swiss-badge-portfolio hidden sm:inline-flex">This Website!</span>
               )}
             </div>
           </div>
 
-          <p className="swiss-text-label text-gray-500 line-clamp-1 mb-3">
+          <p className="swiss-text-label text-gray-500 line-clamp-1 mb-2 sm:mb-3 lowercase italic">
             {project.description || "No description"}
           </p>
 
           {/* Metadata row */}
-          <div className="flex items-center gap-5 swiss-text-mono text-gray-500">
+          <div className="flex items-center gap-3 sm:gap-5 swiss-text-mono text-gray-500 text-[10px] sm:text-[11px]">
             <span className="flex items-center gap-1.5">
-              <Star className="w-3.5 h-3.5" />
+              <Star className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
               {project.stars}
             </span>
             <span className="flex items-center gap-1.5">
-              <GitFork className="w-3.5 h-3.5" />
+              <GitFork className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
               {project.forks}
             </span>
             <span className="flex items-center gap-1.5 text-terracotta-light/70">
-              <Clock className="w-3.5 h-3.5" />
+              <Clock className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
               {formatTimeAgo(project.lastActivity)}
             </span>
           </div>
         </div>
 
         {/* Chevron */}
-        <ChevronRight className="w-5 h-5 text-gray-600 group-hover:text-terracotta-light transition-colors flex-shrink-0 mt-1" />
+        <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 text-gray-600 group-hover:text-terracotta-light transition-colors flex-shrink-0" />
       </div>
     </button>
   );
@@ -124,42 +124,42 @@ interface PRItemProps {
 
 export function PRItem({ pr, onToggleCommits, commitsExpanded }: PRItemProps) {
   return (
-    <div className="swiss-card block group p-4">
-      <div className="flex items-start gap-4">
-        {/* Left: Status + Number */}
-        <div className="flex flex-col items-start gap-2 min-w-[5.5rem]">
+    <div className="swiss-card block group p-3 sm:p-4">
+      <div className="flex flex-col sm:flex-row items-start gap-3 sm:gap-4">
+        {/* Top/Left: Status + Number */}
+        <div className="flex items-center sm:flex-col sm:items-start gap-2 min-w-0 sm:min-w-[5.5rem]">
           <PRStatus state={pr.state} />
-          <span className="swiss-text-mono text-gray-500">#{pr.number}</span>
+          <span className="swiss-text-mono text-gray-500 text-[10px] sm:text-xs">#{pr.number}</span>
         </div>
 
         {/* Middle: Title + Labels + Toggle */}
-        <div className="flex-1 min-w-0">
+        <div className="flex-1 min-w-0 w-full">
           <a
             href={pr.htmlUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-200 group-hover:text-white transition-colors line-clamp-1 mb-1 inline-block"
+            className="text-gray-200 group-hover:text-white transition-colors line-clamp-2 sm:line-clamp-1 mb-2 sm:mb-1 inline-block text-sm sm:text-base font-medium"
           >
             {pr.title}
           </a>
 
           {/* Labels row */}
           {pr.labels.length > 0 && (
-            <div className="flex flex-wrap gap-1.5 mb-2">
-              {pr.labels.slice(0, 3).map((label) => (
+            <div className="flex flex-wrap gap-1.5 mb-3 sm:mb-2">
+              {pr.labels.slice(0, 2).map((label) => (
                 <PRLabel key={label.name} label={label} />
               ))}
-              {pr.labels.length > 3 && (
-                <span className="swiss-text-mono text-gray-500 text-xs">
-                  +{pr.labels.length - 3}
+              {pr.labels.length > 2 && (
+                <span className="swiss-text-mono text-gray-500 text-[10px]">
+                  +{pr.labels.length - 2}
                 </span>
               )}
             </div>
           )}
 
           {/* Meta row: date + toggle */}
-          <div className="flex items-center justify-between">
-            <span className="swiss-text-mono text-xs text-gray-500">
+          <div className="flex items-center justify-between mt-1">
+            <span className="swiss-text-mono text-[10px] text-gray-500">
               {formatTimeAgo(pr.updatedAt)}
             </span>
 
@@ -171,17 +171,17 @@ export function PRItem({ pr, onToggleCommits, commitsExpanded }: PRItemProps) {
                   e.preventDefault();
                   onToggleCommits();
                 }}
-                className="text-xs text-terracotta-light hover:text-terracotta transition-colors swiss-text-mono flex items-center gap-1 px-2 py-1 rounded hover:bg-terracotta/10"
+                className="text-[10px] sm:text-xs text-terracotta-light hover:text-terracotta transition-colors swiss-text-mono flex items-center gap-1.5 px-2.5 py-1.5 rounded bg-terracotta/5 hover:bg-terracotta/10 sm:bg-transparent"
               >
                 <GitCommit className="w-3.5 h-3.5" />
-                {commitsExpanded ? "Hide commits" : "Show commits"}
+                {commitsExpanded ? "Hide" : "Commits"}
               </button>
             )}
           </div>
         </div>
 
-        {/* Right: Stats */}
-        <div className="flex flex-col items-end gap-1.5 swiss-text-mono text-xs">
+        {/* Bottom/Right: Stats */}
+        <div className="flex flex-row sm:flex-col items-center sm:items-end gap-3 sm:gap-1.5 swiss-text-mono text-[10px] sm:text-xs pt-2 sm:pt-0 border-t border-white/5 sm:border-0 w-full sm:w-auto">
           <div className="flex items-center gap-2">
             <span className="text-green-400">+{pr.additions}</span>
             <span className="text-red-400">-{pr.deletions}</span>
