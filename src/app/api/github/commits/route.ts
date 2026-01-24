@@ -49,7 +49,7 @@ export async function GET() {
       {
         headers,
         // Cache on Vercel edge for 5 minutes
-        next: { revalidate: 300 },
+        next: { revalidate: 60 },
       }
     );
 

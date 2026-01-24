@@ -37,7 +37,7 @@ export async function GET(
 
     const res = await fetch(
       `https://api.github.com/repos/${owner}/${repo}/commits?per_page=15`,
-      { headers, next: { revalidate: 300 } }
+      { headers, next: { revalidate: 60 } }
     );
 
     if (!res.ok) {

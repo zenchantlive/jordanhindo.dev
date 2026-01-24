@@ -37,7 +37,7 @@ export function useGithubFeed(): GithubData & {
     async function loadProjects() {
       try {
         const res = await fetch("/api/github/projects", {
-          next: { revalidate: 300 },
+          next: { revalidate: 60 },
         });
         
         if (!res.ok) throw new Error("Failed to fetch projects");
@@ -62,7 +62,7 @@ export function useGithubFeed(): GithubData & {
         try {
           const res = await fetch(
             `/api/github/projects/${projectName}/prs`,
-            { next: { revalidate: 300 } }
+            { next: { revalidate: 60 } }
           );
           
           if (res.ok) {
@@ -85,7 +85,7 @@ export function useGithubFeed(): GithubData & {
         try {
           const res = await fetch(
             `/api/github/projects/${projectName}/commits`,
-            { next: { revalidate: 300 } }
+            { next: { revalidate: 60 } }
           );
           
           if (res.ok) {
@@ -127,7 +127,7 @@ export function useGithubFeed(): GithubData & {
     async function loadProjects() {
       try {
         const res = await fetch("/api/github/projects", {
-          next: { revalidate: 300 },
+          next: { revalidate: 60 },
         });
         
         if (!res.ok) throw new Error("Failed to fetch projects");

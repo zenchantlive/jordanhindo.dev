@@ -39,11 +39,10 @@ export function PRStatus({ state }: PRStatusProps) {
 interface ProjectItemProps {
   project: Project;
   onClick: () => void;
-  getRepoGradient: (repoName: string) => string;
 }
 
-export function ProjectItem({ project, onClick, getRepoGradient }: ProjectItemProps) {
-  const gradient = getRepoGradient(project.name);
+export function ProjectItem({ project, onClick }: ProjectItemProps) {
+  const gradient = project.gradient;
   const shortName = project.name.split("/")[1] || project.name;
 
   return (
@@ -63,7 +62,12 @@ export function ProjectItem({ project, onClick, getRepoGradient }: ProjectItemPr
             <span className="font-semibold text-gray-100 group-hover:text-white transition-colors">
               {shortName}
             </span>
-            <StatusBadge status={project.status} />
+            <div className="flex items-center gap-2">
+              <StatusBadge status={project.status} />
+              {project.name.toLowerCase() === 'jordanhindo.dev' && (
+                <span className="swiss-badge-portfolio">This Website!</span>
+              )}
+            </div>
           </div>
 
           <p className="swiss-text-label text-gray-500 line-clamp-1 mb-3">

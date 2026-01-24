@@ -41,7 +41,7 @@ export async function GET(
     // Fetch commits for this specific PR
     const res = await fetch(
       `https://api.github.com/repos/${owner}/${repo}/pulls/${prNum}/commits?per_page=50`,
-      { headers, next: { revalidate: 300 } }
+      { headers, next: { revalidate: 60 } }
     );
 
     if (!res.ok) {

@@ -11,7 +11,6 @@ import {
   CommitCardSmall,
   StatusBadge,
 } from "./ui";
-import { getRepoGradient } from "./types";
 import type { Commit } from "@/lib/github";
 
 export function GithubFeed() {
@@ -39,7 +38,7 @@ export function GithubFeed() {
     try {
       const res = await fetch(
         `/api/github/projects/${selectedProject.fullName}/prs/${prNumber}/commits`,
-        { next: { revalidate: 300 } }
+        { next: { revalidate: 60 } }
       );
 
       if (res.ok) {
@@ -104,7 +103,6 @@ export function GithubFeed() {
               >
                 <ProjectItem
                   project={project}
-                  getRepoGradient={getRepoGradient}
                   onClick={() => selectProject(project)}
                 />
               </div>
@@ -128,9 +126,7 @@ export function GithubFeed() {
           {/* Project header */}
           <div className="flex items-center gap-3 mb-4 p-4 rounded-xl bg-gray-800/30 border border-gray-800">
             <div
-              className={`w-10 h-10 rounded-xl bg-gradient-to-br ${getRepoGradient(
-                selectedProject.name
-              )} flex items-center justify-center`}
+              className={`w-10 h-10 rounded-xl bg-gradient-to-br ${selectedProject.gradient} flex items-center justify-center`}
             >
               <span className="text-white font-bold">
                 {selectedProject.name.split("/")[1]?.[0]?.toUpperCase() || "G"}

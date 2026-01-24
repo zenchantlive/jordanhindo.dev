@@ -68,7 +68,12 @@ export type RepoActivity = {
 };
 
 // Helper to determine project status based on last activity
-export function getProjectStatus(lastActivity: string): ProjectStatus {
+export function getProjectStatus(lastActivity: string, repoName?: string): ProjectStatus {
+  // Always mark this portfolio as active
+  if (repoName?.toLowerCase() === 'jordanhindo.dev') {
+    return 'active';
+  }
+
   const last = new Date(lastActivity).getTime();
   const now = Date.now();
   const daysSince = (now - last) / (1000 * 60 * 60 * 24);
@@ -78,19 +83,24 @@ export function getProjectStatus(lastActivity: string): ProjectStatus {
   return 'stale';
 }
 
-// Project color mappings
-const REPO_GRADIENTS: Record<string, string> = {
-  'jordanhindo.dev': 'from-purple-500 to-blue-500',
-  'asset-hatch': 'from-green-500 to-emerald-500',
-  'catwalk': 'from-orange-500 to-red-500',
-  'thefeed': 'from-blue-500 to-cyan-500',
-  'rlm': 'from-pink-500 to-rose-500',
-};
+// Available gradients for random assignment
+const GRADIENT_OPTIONS = [
+  'from-purple-500 to-blue-500',
+  'from-green-500 to-emerald-500',
+  'from-orange-500 to-red-500',
+  'from-blue-500 to-cyan-500',
+  'from-pink-500 to-rose-500',
+];
 
 export function getRepoGradient(name: string): string {
-  const key = name.toLowerCase();
-  for (const [pattern, gradient] of Object.entries(REPO_GRADIENTS)) {
-    if (key.includes(pattern.toLowerCase())) return gradient;
+  // Use a simple hash of the name to deterministically pick a gradient
+  // This ensures the same project always gets the same gradient (preventing hydration mismatches)
+  // while distributing them effectively randomly across projects
+  let hash = 0;
+  for (let i = 0; i < name.length; i++) {
+    hash = name.charCodeAt(i) + ((hash << 5) - hash);
   }
-  return 'from-gray-500 to-slate-500';
+  
+  const index = Math.abs(hash) % GRADIENT_OPTIONS.length;
+  return GRADIENT_OPTIONS[index];
 }

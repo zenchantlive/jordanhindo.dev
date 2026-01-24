@@ -35,7 +35,7 @@ async function fetchPRDetail(
   try {
     const res = await fetch(
       `https://api.github.com/repos/${owner}/${repo}/pulls/${prNumber}`,
-      { headers, next: { revalidate: 300 } }
+      { headers, next: { revalidate: 60 } }
     );
     
     if (!res.ok) return null;
@@ -71,7 +71,7 @@ export async function GET(
 
     const listRes = await fetch(
       `https://api.github.com/repos/${owner}/${repo}/pulls?state=all&sort=updated&direction=desc&per_page=10`,
-      { headers, next: { revalidate: 300 } }
+      { headers, next: { revalidate: 60 } }
     );
 
     if (!listRes.ok) {

@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { Project, getProjectStatus, getRepoGradient } from "@/lib/github";
+import { Project, getProjectStatus } from "@/lib/github";
 
 type GitHubRepo = {
   id: number;
@@ -31,7 +31,7 @@ export async function GET() {
     // Fetch user's repositories
     const reposRes = await fetch(
       `https://api.github.com/users/${username}/repos?sort=updated&per_page=100`,
-      { headers, next: { revalidate: 300 } }
+      { headers, next: { revalidate: 60 } }
     );
 
     if (!reposRes.ok) {
@@ -44,7 +44,7 @@ export async function GET() {
     // Fetch recent events to determine actual activity
     const eventsRes = await fetch(
       `https://api.github.com/users/${username}/events/public?per_page=100`,
-      { headers, next: { revalidate: 300 } }
+      { headers, next: { revalidate: 60 } }
     );
 
     let events: Array<{ repo: { name: string }; created_at: string }> = [];
@@ -60,8 +60,17 @@ export async function GET() {
       }
     }
 
+    // Define gradients locally to ensure we have access to them for unique assignment
+    const GRADIENT_OPTIONS = [
+      'from-purple-500 to-blue-500',
+      'from-green-500 to-emerald-500',
+      'from-orange-500 to-red-500',
+      'from-blue-500 to-cyan-500',
+      'from-pink-500 to-rose-500',
+    ];
+
     // Process repos into projects with rich metadata
-    const projects: Project[] = repos
+    let projects: Project[] = repos
       .map((repo) => {
         // Determine last activity from events or repo update
         const lastActivity = activityMap.get(repo.full_name) || repo.pushed_at;
@@ -74,13 +83,19 @@ export async function GET() {
           forks: repo.forks_count,
           language: repo.language,
           lastActivity,
-          status: getProjectStatus(lastActivity),
-          gradient: getRepoGradient(repo.name),
+          status: getProjectStatus(lastActivity, repo.name),
+          gradient: '', // Placeholder, will assign unique below
           htmlUrl: repo.html_url,
         };
       })
       .sort((a, b) => new Date(b.lastActivity).getTime() - new Date(a.lastActivity).getTime())
-      .slice(0, 3); // Top 3 by activity
+      .slice(0, 5); // Top 5 by activity
+
+    // Assign unique gradients
+    projects = projects.map((project, index) => ({
+      ...project,
+      gradient: GRADIENT_OPTIONS[index % GRADIENT_OPTIONS.length]
+    }));
 
     console.log(`Returning ${projects.length} active projects`);
 
