@@ -10,7 +10,7 @@ reading_time: "12 min"
 # Part 4: iFrame Whack-a-Mole - The Studio Orchestration
 
 **The Story So Far:** We have 3D assets. We have skyboxes. Now we need a place for them to live. Welcome to the **Hatch-Studios Game Generator**.
-
+![working 3d game generator without assets](/blog/From-2D-Asset-to-3D-Studio/Screenshot%202026-01-20%20173514.png)
 ## The Ridiculous Goal
 
 It wasn't enough to just generate assets. I wanted the AI to **write the game**. 
@@ -82,3 +82,7 @@ It worked.
 - `src/components/studio/PreviewFrame.tsx`
 
 **Code**: [components/studio/PreviewFrame.tsx](https://github.com/zenchantlive/Asset-Hatch/blob/main/src/components/studio/PreviewFrame.tsx)
+
+---
+
+**Up Next:** [Part 5: Betting on the Future - The Boris Philosophy →](05-betting-on-the-future.md)
