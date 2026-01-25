@@ -20,6 +20,7 @@ export interface BlogSeries {
     lastUpdated: string;
     slug: string;
     githubRepo?: string;
+    techStack?: string[];
 }
 
 export interface BlogPost {

@@ -58,9 +58,17 @@ export default async function SeriesPage({ params }: SeriesPageProps) {
                         <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">
                             {series.title}
                         </h1>
-                        <p className="text-xl text-gray-400 max-w-3xl">
+                        <p className="text-xl text-gray-400 max-w-3xl mb-6">
                             {series.itemCount}-part series: {series.description}
                         </p>
+
+                        {series.techStack && series.techStack.length > 0 && (
+                            <div className="flex flex-wrap gap-3">
+                                {series.techStack.map(tech => (
+                                    <TechTag key={tech} tech={tech} size="md" />
+                                ))}
+                            </div>
+                        )}
                     </header>
 
                     {/* Hero + Sidebar Layout */}

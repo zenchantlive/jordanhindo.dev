@@ -22,7 +22,17 @@ export async function getSeriesMetadata(seriesId: string): Promise<BlogSeries | 
                 description: 'A transparent build log of a production-ready AI game asset generator.',
                 lastUpdated: '2026-01-05',
                 slug: 'asset-hatch',
-                githubRepo: 'zenchantlive/Asset-Hatch'
+                githubRepo: 'zenchantlive/Asset-Hatch',
+                techStack: ['Next.js', 'PostgreSQL', 'OpenRouter', 'Prisma']
+            },
+            'From-2D-Asset-to-3D-Studio': {
+                id: 'From-2D-Asset-to-3D-Studio',
+                title: 'Hatch-Studios: From 2D Asset to 3D Studio',
+                description: 'The evolution of Asset Hatch from a 2D generator to a comprehensive 3D game studio.',
+                lastUpdated: '2026-01-24',
+                slug: 'From-2D-Asset-to-3D-Studio',
+                githubRepo: 'zenchantlive/Asset-Hatch',
+                techStack: ['Babylon.js', 'Tripo3D', '3D-Studio', 'OpenHands', 'Next.js']
             },
             'catwalk-blog': {
                 id: 'catwalk-blog',
@@ -30,14 +40,16 @@ export async function getSeriesMetadata(seriesId: string): Promise<BlogSeries | 
                 description: 'The journey of creating a "Vercel for MCP" deployment platform using AI-first development.',
                 lastUpdated: '2025-12-27',
                 slug: 'catwalk-blog',
-                githubRepo: 'zenchantlive/catwalk'
+                githubRepo: 'zenchantlive/catwalk',
+                techStack: ['MCP', 'DevOps', 'Platform', 'Fly.io']
             },
             'thefeed-blog': {
                 id: 'thefeed-blog',
                 title: 'TheFeed Development Journey',
                 description: 'Building an AI-powered food security platform from starter kit to production.',
                 lastUpdated: '2025-12-27',
-                slug: 'thefeed-blog'
+                slug: 'thefeed-blog',
+                techStack: ['Next.js', 'Community-Focus', 'Real-time']
             }
         };
 
