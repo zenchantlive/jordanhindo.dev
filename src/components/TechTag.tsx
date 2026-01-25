@@ -17,7 +17,7 @@ const TECH_LINKS: Record<string, string> = {
     'AI-Agents': 'https://www.anthropic.com/news/claude-3-5-sonnet',
     'OpenHands': 'https://app.all-hands.dev/',
     'MCP': 'https://modelcontextprotocol.io',
-    'Fly.io': 'https://fly.io',
+    'Fly.io': 'https://www.fly.io',
     'Prisma': 'https://www.prisma.io',
     'Community-Focus': 'https://github.com/zenchantlive/thefeed'
 };
