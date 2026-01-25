@@ -40,7 +40,6 @@ To survive this 11-day sprint, I had to be vigilant. I had to build rigorous gua
 
 This series documents the frantic transition from a 2D generator to a comprehensive 3D Game Studio. We're going to dive into the technical war stories, the math of skyboxes, the race conditions of iFrames, and the sheer joy of seeing a 3D world load for the first time.
 
-**Next Up:** [Part 1: The Digital Dictator - Managing Gaslighting Agents](part-1-the-gaslighting-agent)
 
 ---
 

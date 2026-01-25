@@ -75,5 +75,5 @@ By keeping Babylon inside its own canvas and its own component, we didn't break 
 - `src/memory/adr/023-skybox-viewer-selection.md`
 - `src/components/studio/SimpleSkyboxViewer.tsx`
 
-**Code**: [SimpleSkyboxViewer.tsx](https://github.com/zenchantlive/Asset-Hatch/blob/main/src/components/studio/SimpleSkyboxViewer.tsx)
+**Code**: [SimpleSkyboxViewer.tsx](https://github.com/zenchantlive/Asset-Hatch/blob/e6973fb9a65d5337ab7a0e7d6687b87ad41b98f6/src/components/3d/generation/SimpleSkyboxViewer.tsx#L18)
 

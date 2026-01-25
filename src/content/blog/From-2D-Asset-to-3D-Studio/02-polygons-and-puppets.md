@@ -74,4 +74,4 @@ It wasn't just a 2D image masquerading as 3D. It was a real, rigged, textured as
 - `src/memory/adr/023-3d-mode-foundation.md`
 - `src/lib/tripo/mesh.ts`
 
-**Code**: [lib/tripo/mesh.ts](https://github.com/zenchantlive/Asset-Hatch/blob/main/lib/tripo/mesh.ts)   
+**Code**: [lib/tripo/mesh.ts](https://github.com/zenchantlive/Asset-Hatch/blob/main/src/lib/tripo/mesh.ts)   

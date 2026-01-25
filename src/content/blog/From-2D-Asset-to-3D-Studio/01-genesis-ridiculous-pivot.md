@@ -83,7 +83,7 @@ My job isn't writing functions anymore; it's **Architecting Intent**. If I can't
 **Related Files**:
 - `src/memory/adr/023-3d-mode-foundation.md` - The decision to pivot
 
-**Code**: [lib/tripo/client.ts](https://github.com/zenchantlive/Asset-Hatch/blob/main/lib/tripo/client.ts)
+**Code**: [lib/tripo/client.ts](https://github.com/zenchantlive/Asset-Hatch/blob/main/src/lib/tripo/client.ts)
 
 ---
 
