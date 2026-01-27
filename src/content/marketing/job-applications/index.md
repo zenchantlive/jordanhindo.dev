@@ -19,8 +19,11 @@
 
 | Company | Role | Location | Applied | Status | Fit Score | Details |
 |---------|------|----------|---------|--------|-----------|---------|
-| Skyrocket (Social AI) | Founding Agentic AI Engineer | San Francisco | 2026-01-16 | 🟡 Applying | 10/10 | [View](./applications/skyrocket-social-ai.md) |
+| Skyrocket (Social AI) | Founding Agentic AI Engineer | San Francisco | 2026-01-16 | ❌ Closed | 10/10 | [View](./applications/skyrocket-social-ai.md) |
 | Guild.ai | AI Engineer Production Agents | San Francisco | 2026-01-16 | 🟡 Applying | 10/10 | [View](./applications/guild-ai.md) |
+| Orbis | Tech Lead / Founding Eng | Remote | - | ⚪ To Apply | 10/10 | Agentic AI, Remote |
+| YC Stealth (Compliance) | Founding AI Engineer | SF | - | ⚪ To Apply | 10/10 | Automating compliance |
+| FurtherAI | AI Engineer - Agent Team | SF | - | ⚪ To Apply | 9/10 | Agent team |
 | Actively AI | Software Engineer (AI/LLM) | San Francisco | 2026-01-16 | 🟡 Applying | 9/10 | [View](./applications/actively-ai.md) |
 | Prologis | AI Intern | San Francisco (Hybrid) | 2026-01-16 | ⏳ Applied | 9/10 | [View](./applications/prologis-ai-intern.md) |
 | Symbolica AI | AI Agent Engineer | San Francisco | 2026-01-16 | ⏳ Applied | 9/10 | [View](./applications/symbolica-ai.md) |

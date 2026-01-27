@@ -76,37 +76,44 @@ export default function ResumePage() {
 
                                 <div className="space-y-12">
                                     <ExperienceItem
-                                        title="Creator & Lead Developer"
-                                        company="Asset Hatch"
-                                        period="Dec 2025 - Present"
-                                        description="Designed multi-agent AI pipeline achieving 70% development time reduction vs manual coding. Built tool-calling system with Vercel AI SDK and Zod schemas for type-safe agent execution. Created AI-Native Loop methodology: Claude (vision) → Antigravity (build) → Perplexity (research) → bots (review). 30,000+ line TypeScript codebase documented across 18-part blog series."
-                                        stats={['Multi-Agent Pipelines', 'Tool Calling', 'Vercel AI SDK', 'TypeScript']}
-                                        link="https://github.com/zenchantlive/Asset-Hatch"
-                                        image={assetHatchImg}
-                                        liveUrl="https://asset-hatch.vercel.app"
-                                    />
+                                        title="Independent AI Engineer & Researcher"
+                                        company="Self-Employed"
+                                        period="Jan 2023 - Present"
+                                        description="Architecting and shipping production-grade agentic systems. specialized in Model Context Protocol (MCP) infrastructure, multi-agent orchestration, and privacy-first AI architectures."
+                                        stats={['MCP', 'Vercel AI SDK', 'Orchestration', 'System Architecture']}
+                                    >
+                                        <div className="mt-8 space-y-8 border-l-2 border-white/5 pl-6 ml-1">
+                                            <ProjectHighlight
+                                                name="Catwalk"
+                                                role="Infrastructure Engineer"
+                                                description="Built a serverless deployment platform for MCP servers. Engineered a custom stdio-to-HTTP bridge implementing the June 2025 MCP Streamable HTTP spec, enabling local agents to securely access remote tools. Implemented a security sandbox to validate AI-generated package imports against npm/PyPI registries to prevent supply-chain attacks."
+                                                link="https://github.com/zenchantlive/catwalk"
+                                                image={catwalkImg}
+                                                liveUrl="https://catwalk-xi.vercel.app"
+                                                tags={['MCP Streamable HTTP', 'FastAPI', 'Fly.io Machines', 'Security Sandboxing']}
+                                            />
 
-                                    <ExperienceItem
-                                        title="Creator"
-                                        company="Catwalk"
-                                        period="Dec 2025"
-                                        description="Built MCP server deployment platform using 100% AI orchestration—zero manual code. Implemented multi-agent code review pipeline with CodeRabbit, Qodo, and Gemini Code Assist. Created 'AI Orchestrator's Handbook' documenting reproducible methodology for agentic development."
-                                        stats={['MCP Protocol', 'AI Orchestration', 'FastAPI', 'Fly.io']}
-                                        link="https://github.com/zenchantlive/catwalk"
-                                        image={catwalkImg}
-                                        liveUrl="https://catwalk-xi.vercel.app"
-                                    />
+                                            <ProjectHighlight
+                                                name="Asset Hatch"
+                                                role="Lead Architect"
+                                                description="Designed a hybrid persistence engine using Client-side IndexedDB (Dexie) for zero-latency UI state and Server-side Postgres (Prisma) for data durability. Implemented a Privacy-First 'Bring Your Own Key' (BYOK) architecture, ensuring sensitive inference data never touches intermediate servers. Orchestrated a multi-agent loop that shipped 30,000 lines of type-safe code in 11 days."
+                                                link="https://github.com/zenchantlive/Asset-Hatch"
+                                                image={assetHatchImg}
+                                                liveUrl="https://asset-hatch.vercel.app"
+                                                tags={['Hybrid Persistence', 'Local-First', 'Multi-Agent', 'Systematic Debugging']}
+                                            />
 
-                                    <ExperienceItem
-                                        title="Creator"
-                                        company="TheFeed"
-                                        period="Nov - Dec 2025"
-                                        description="Integrated AI assistant ('Sous-Chef') using CopilotKit for recipe generation from available ingredients. Built dual-path architecture enabling anonymous crisis access alongside authenticated features. Full-stack with Mapbox GL maps and Drizzle ORM."
-                                        stats={['AI Assistant', 'CopilotKit', 'Mapbox GL', 'Full-Stack']}
-                                        link="https://thefeed-phi.vercel.app"
-                                        image={thefeedImg}
-                                        liveUrl="https://thefeed-phi.vercel.app"
-                                    />
+                                            <ProjectHighlight
+                                                name="TheFeed"
+                                                role="Full Stack Engineer"
+                                                description="Integrated 'Sous-Chef' AI assistant using CopilotKit for context-aware recipe generation. Built a dual-path auth system for anonymous crisis access. Solved complex geospatial challenges with Mapbox GL and PostGIS for precise food bank discovery."
+                                                link="https://thefeed-phi.vercel.app"
+                                                image={thefeedImg}
+                                                liveUrl="https://thefeed-phi.vercel.app"
+                                                tags={['CopilotKit', 'Geospatial', 'Dual-Auth', 'RAG']}
+                                            />
+                                        </div>
+                                    </ExperienceItem>
 
                                     <ExperienceItem
                                         title="Workability Tech"
@@ -188,7 +195,7 @@ export default function ResumePage() {
 // Supports optional image prop to show project screenshot (clickable to live site)
 import type { StaticImageData } from 'next/image';
 
-function ExperienceItem({ title, company, period, description, stats, link, image, liveUrl }: {
+function ExperienceItem({ title, company, period, description, stats, link, image, liveUrl, children }: {
     title: string;
     company: string;
     period: string;
@@ -197,6 +204,7 @@ function ExperienceItem({ title, company, period, description, stats, link, imag
     link?: string;
     image?: StaticImageData;
     liveUrl?: string;
+    children?: React.ReactNode;
 }) {
     return (
         <div className="relative pl-8 border-l border-white/5 pb-12 last:pb-0">
@@ -251,12 +259,68 @@ function ExperienceItem({ title, company, period, description, stats, link, imag
             </p>
 
             {/* Skills/tech tags */}
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-2 mb-6">
                 {stats.map(stat => (
                     <span key={stat} className="px-3 py-1 bg-white/5 border border-white/5 text-gray-400 text-xs rounded-full">
                         {stat}
                     </span>
                 ))}
+            </div>
+
+            {children}
+        </div>
+    );
+}
+
+function ProjectHighlight({ name, role, description, link, image, liveUrl, tags }: {
+    name: string;
+    role: string;
+    description: string;
+    link: string;
+    image: StaticImageData;
+    liveUrl: string;
+    tags: string[];
+}) {
+    return (
+        <div className="group/project">
+            <div className="flex flex-col md:flex-row gap-6 mb-4">
+                {/* Thumbnail - smaller than main experience item */}
+                <a
+                    href={liveUrl || link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="shrink-0 w-full md:w-48 h-32 relative rounded-lg overflow-hidden border border-white/10 bg-white/5 hover:border-purple-500/40 transition-all duration-300"
+                >
+                    <div className="absolute inset-0 bg-black/20 group-hover/project:bg-transparent transition-colors z-10" />
+                    <Image
+                        src={image}
+                        alt={name}
+                        className="object-cover transition-transform duration-500 group-hover/project:scale-105"
+                        fill
+                        sizes="(max-width: 768px) 100vw, 200px"
+                    />
+                </a>
+
+                <div className="flex-1">
+                    <div className="flex items-baseline justify-between mb-1">
+                        <h4 className="text-lg font-bold text-white group-hover/project:text-purple-300 transition-colors">
+                            <a href={link} target="_blank" rel="noopener noreferrer">{name}</a>
+                        </h4>
+                        <span className="text-sm text-purple-400 font-medium">{role}</span>
+                    </div>
+
+                    <p className="text-gray-400 text-sm leading-relaxed mb-3">
+                        {description}
+                    </p>
+
+                    <div className="flex flex-wrap gap-2">
+                        {tags.map(tag => (
+                            <span key={tag} className="px-2 py-0.5 bg-purple-500/10 border border-purple-500/20 text-purple-300 text-[10px] uppercase tracking-wide rounded">
+                                {tag}
+                            </span>
+                        ))}
+                    </div>
+                </div>
             </div>
         </div>
     );
