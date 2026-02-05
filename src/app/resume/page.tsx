@@ -10,7 +10,7 @@ import thefeedImg from './images/thefeed.png';
 
 export const metadata = {
     title: 'Resume | Jordan Hindo',
-    description: 'AI Agent Developer and LLM Application Engineer. Creator of multi-agent pipelines, tool-calling systems, and the AI-Native Loop methodology.',
+    description: 'AI Agent Developer & Technical Educator. Creator of multi-agent pipelines, tool-calling systems, and 40+ technical blog posts on AI-native development.',
 };
 
 export default function ResumePage() {
@@ -30,8 +30,11 @@ export default function ResumePage() {
                                 <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
                                     Jordan <span className="text-gradient">Hindo</span>
                                 </h1>
-                                <p className="text-xl text-purple-400 font-medium mb-6">
-                                    AI Agent Developer & LLM Application Engineer
+                                <p className="text-xl text-purple-400 font-medium mb-2">
+                                    AI Agent Developer & Technical Educator
+                                </p>
+                                <p className="text-sm text-gray-400 mb-6">
+                                    40+ technical posts documenting AI-native development across 3 production project series
                                 </p>
 
                                 <div className="flex flex-wrap gap-4 text-sm text-gray-400">
@@ -166,7 +169,7 @@ export default function ResumePage() {
                             <div className="glass-card rounded-2xl p-8 border-white/5 bg-gradient-to-br from-purple-500/5 to-blue-500/5">
                                 <h3 className="text-lg font-bold text-white mb-4">Let&apos;s Connect</h3>
                                 <p className="text-gray-400 text-sm mb-6">
-                                    Open to AI Agent Developer, LLM Engineer, and Forward Deployed roles. Bay Area or remote.
+                                    Open to AI Agent Developer, Developer Advocate, and Forward Deployed roles. Bay Area or remote.
                                 </p>
                                 <div className="flex gap-4">
                                     <Link href="https://www.linkedin.com/in/jordan-hindo-711007173/" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/10 transition-colors text-white">
