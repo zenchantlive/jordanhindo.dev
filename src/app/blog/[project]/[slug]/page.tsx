@@ -11,10 +11,12 @@ interface PostPageProps {
 export async function generateMetadata({ params }: PostPageProps) {
     const { project, slug } = await params;
     const post = await getPostBySlug(project, slug);
-    if (!post) return { title: 'Post Not Found' };
+    const series = await getSeriesMetadata(project);
+
+    if (!post || !series) return { title: 'Post Not Found' };
 
     return {
-        title: `${post.title} | Building Asset Hatch`,
+        title: `${post.title} | ${series.title}`,
         description: post.description,
     };
 }

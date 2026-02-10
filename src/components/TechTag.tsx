@@ -19,7 +19,10 @@ const TECH_LINKS: Record<string, string> = {
     'MCP': 'https://modelcontextprotocol.io',
     'Fly.io': 'https://www.fly.io',
     'Prisma': 'https://www.prisma.io',
-    'Community-Focus': 'https://github.com/zenchantlive/thefeed'
+    'Community-Focus': 'https://github.com/zenchantlive/thefeed',
+    'RLM': 'https://arxiv.org/abs/2512.24601',
+    'SQLite': 'https://www.sqlite.org',
+    'Bun': 'https://bun.sh'
 };
 
 export function TechTag({ tech, size = 'sm' }: TechTagProps) {

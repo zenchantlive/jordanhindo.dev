@@ -24,8 +24,11 @@
 | Scaled Cognition | Forward Deployed Engineer | San Jose, CA | 2026-01-26 | ⏳ Applied | 10/10 | [View](./applications/scaled-cognition.md) |
 | Company | Role | Location | Applied | Status | Fit Score | Details |
 |---------|------|----------|---------|--------|-----------|---------|
-| Veritus | AI Voice Agent Engineer | SF/Redwood City | 2026-02-04 | 📞 **Interview Wed 3PM** | 10/10 | [View](./applications/veritus.md) |
-| Guild.ai | Developer Advocate (Founding) | San Francisco | 2026-02-04 | 📞 **Interview Thu** | 9/10 | [View](./applications/guild-ai-devrel.md) |
+| Veritus | AI Voice Agent Engineer | SF/Redwood City | 2026-02-05 | ⏳ Interviewed | 10/10 | [View](./applications/veritus.md) |
+| Zep AI | Developer Relations Lead | SF/Remote | 2026-02-04 | ⏳ Applied | 10/10 | [View](./applications/zep-ai.md) |
+| Guild.ai | Developer Advocate (Founding) | San Francisco | 2026-02-09 | ⏳ Interviewed | 9/10 | [View](./applications/guild-ai-devrel.md) |
+| SigNoz | DevRel Engineer | Remote (US) | 2026-02-04 | 🟡 Applying | 7/10 | [View](./applications/signoz.md) |
+| Better Auth | DevRel Engineer | San Francisco | 2026-02-04 | 🟡 Applying | 8/10 | [View](./applications/better-auth.md) |
 | Skyrocket (Social AI) | Founding Agentic AI Engineer | San Francisco | 2026-01-16 | ❌ Closed | 10/10 | [View](./applications/skyrocket-social-ai.md) |
 | Guild.ai | AI Engineer Production Agents | San Francisco | 2026-01-16 | 🟡 Applying | 10/10 | [View](./applications/guild-ai.md) |
 | Orbis | Tech Lead / Founding Eng | Remote | - | ⚪ To Apply | 10/10 | Agentic AI, Remote |
