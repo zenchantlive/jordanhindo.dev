@@ -50,6 +50,15 @@ export async function getSeriesMetadata(seriesId: string): Promise<BlogSeries | 
                 lastUpdated: '2025-12-27',
                 slug: 'thefeed-blog',
                 techStack: ['Next.js', 'Community-Focus', 'Real-time']
+            },
+            'turtlez-blog': {
+                id: 'turtlez-blog',
+                title: 'Turtlez: The Recursive Context Engine',
+                description: 'Building a near-infinite context engine for AI agents using Recursive Language Models (RLM).',
+                lastUpdated: '2026-01-27',
+                slug: 'turtlez-blog',
+                githubRepo: 'zenchantlive/Turtlez',
+                techStack: ['RLM', 'SQLite', 'Next.js', 'Bun']
             }
         };
 

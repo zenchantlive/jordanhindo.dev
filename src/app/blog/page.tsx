@@ -5,7 +5,7 @@ import { ArrowRight } from 'lucide-react';
 
 export const metadata = {
     title: 'Blog | Build Logs',
-    description: 'Four production apps built with AI - documented from idea to deployment',
+    description: 'Five production apps built with AI - documented from idea to deployment',
 };
 
 export default async function BlogHub() {
@@ -20,6 +20,7 @@ export default async function BlogHub() {
     const from2Dto3D = seriesMap['From-2D-Asset-to-3D-Studio'];
     const thefeed = seriesMap['thefeed-blog'];
     const catwalk = seriesMap['catwalk-blog'];
+    const turtlez = seriesMap['turtlez-blog'];
 
     return (
         <main className="min-h-screen relative overflow-hidden bg-[#0a0a0a] selection:bg-purple-500/30">
@@ -34,7 +35,7 @@ export default async function BlogHub() {
                             Build Logs
                         </h1>
                         <p className="text-gray-400 text-lg md:text-xl">
-                            Four production apps built with AI - documented from idea to deployment
+                            Five production apps built with AI - documented from idea to deployment
                         </p>
                     </header>
 
@@ -46,7 +47,7 @@ export default async function BlogHub() {
                                 <div className="text-xs text-gray-500 mt-1">Total Posts</div>
                             </div>
                             <div className="bg-[#1a1a1a] border border-white/5 rounded-xl p-4">
-                                <div className="text-2xl font-bold text-purple-400">4</div>
+                                <div className="text-2xl font-bold text-purple-400">5</div>
                                 <div className="text-xs text-gray-500 mt-1">Production Apps</div>
                             </div>
                             <div className="bg-[#1a1a1a] border border-white/5 rounded-xl p-4">
@@ -246,6 +247,52 @@ export default async function BlogHub() {
                                     </div>
 
                                     <div className="inline-flex items-center gap-2 text-blue-400 font-semibold group-hover:gap-3 transition-all text-sm">
+                                        Read Series <ArrowRight className="w-4 h-4" />
+                                    </div>
+                                </div>
+                            </Link>
+                        )}
+
+                        {/* Turtlez */}
+                        {turtlez && (
+                            <Link
+                                href={`/blog/${turtlez.slug}`}
+                                className="group relative block"
+                            >
+                                <div className="absolute -inset-0.5 bg-gradient-to-r from-orange-500/30 to-yellow-500/30 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-500" />
+                                <div className="relative bg-[#161b22]/80 backdrop-blur-xl border-2 border-orange-500/30 rounded-2xl p-6 hover:border-orange-500/50 transition-all duration-300 h-full">
+                                    <div className="h-0.5 w-60 bg-gradient-to-r from-orange-500 to-yellow-500 mb-4" />
+
+                                    <div className="text-orange-400 text-sm font-semibold mb-2">
+                                        {turtlez.itemCount} PARTS
+                                    </div>
+
+                                    <h2 className="text-2xl font-bold text-white mb-3 group-hover:text-orange-300 transition-colors">
+                                        {turtlez.title}
+                                    </h2>
+
+                                    <p className="text-gray-400 mb-4 text-sm">
+                                        {turtlez.description} Solving the AI amnesia problem with recursive memory and SQLite.
+                                    </p>
+
+                                    <div className="mb-4">
+                                        <h3 className="text-white font-semibold text-sm mb-2">Highlights:</h3>
+                                        <ul className="text-gray-400 space-y-1 text-sm">
+                                            <li>• Recursive Language Model (RLM) JS implementation</li>
+                                            <li>• Deterministic search & scoring for dev-loops</li>
+                                            <li>• Transparent SQLite-backed context store</li>
+                                            <li>• 7-phase roadmap for autonomous workspaces</li>
+                                        </ul>
+                                    </div>
+
+                                    <div className="flex flex-wrap gap-2 mb-4">
+                                        <TechTag tech="RLM" />
+                                        <TechTag tech="SQLite" />
+                                        <TechTag tech="Next.js" />
+                                        <TechTag tech="Bun" />
+                                    </div>
+
+                                    <div className="inline-flex items-center gap-2 text-orange-400 font-semibold group-hover:gap-3 transition-all text-sm">
                                         Read Series <ArrowRight className="w-4 h-4" />
                                     </div>
                                 </div>
